@@ -8,7 +8,7 @@ Future Ideas:
 
 -PunGenerator. Break things up by sylabbles and generate possible puns
 
--HollisticLearning
+-HollisticLearning and how to build a habit
 
 -AnkiScripts. Convert wikipedia article into Anki flashcards. 
 
@@ -25,6 +25,15 @@ Future Ideas:
 	Lists the specific workout to do with IF timing
 	Grocery Lists, Meal Plans
 	Carb Cycling
+
+-Retain Book summaries 
+
+-MemTrainer. Based on Dominic O brien's techniques
+
+NLP (natural language processing) word tree stuff
+
+OrganizeMe - organizes everything for you through google calendar. Learns when to assign assignments, how much to study/tasks to do. Sorts daily/weekly tasks, 
+
 
 
 
