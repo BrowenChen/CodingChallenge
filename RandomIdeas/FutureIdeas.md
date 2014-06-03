@@ -1,6 +1,7 @@
 Future Ideas:
 
 -Ben's 12 virtues tracking system applied to general habits
+	Use excel sheet calendars to input habit trackers with 1's and 0's. Export to .cvs file and analyze with code?
 
 -NeverEatAlone app that uses googleMaps API and spaced reptition alg to stay connected with tier 2 and tier 3 friendships
 
