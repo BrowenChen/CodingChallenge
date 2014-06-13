@@ -31,9 +31,16 @@ Future Ideas:
 
 -MemTrainer. Based on Dominic O brien's techniques
 
-NLP (natural language processing) word tree stuff
+-NLP (natural language processing) word tree stuff
 
 OrganizeMe - organizes everything for you through google calendar. Learns when to assign assignments, how much to study/tasks to do. Sorts daily/weekly tasks, 
+
+-MedStudent Memorization app
+
+-BroadenMyView
+
+-WebBookMarkGenerator
+
 
 
 
