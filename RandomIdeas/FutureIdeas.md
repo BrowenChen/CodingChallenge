@@ -41,6 +41,11 @@ OrganizeMe - organizes everything for you through google calendar. Learns when t
 
 -WebBookMarkGenerator
 
+-Generate a random fact of the day pulled from an rss feed or something. 
+
+-Learn puns using spaced reptition
+
+
 
 
 
