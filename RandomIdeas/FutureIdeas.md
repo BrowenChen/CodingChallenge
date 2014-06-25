@@ -2,6 +2,7 @@ Future Ideas:
 
 -Ben's 12 virtues tracking system applied to general habits
 	Use excel sheet calendars to input habit trackers with 1's and 0's. Export to .cvs file and analyze with code?
+	Visual tracking works best. Green dot, red dot
 
 -NeverEatAlone app that uses googleMaps API and spaced reptition alg to stay connected with tier 2 and tier 3 friendships
 
@@ -44,6 +45,22 @@ OrganizeMe - organizes everything for you through google calendar. Learns when t
 -Generate a random fact of the day pulled from an rss feed or something. 
 
 -Learn puns using spaced reptition
+
+- Page parser
+
+-Cheat sheet generator. Learn hotkeys easily.
+
+-pdf parser, take table of contents of a book with py2pdf and make anki front cards format
+
+
+								
+								
+								
+								
+								
+								
+								
+								
 
 
 
