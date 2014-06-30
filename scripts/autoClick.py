@@ -84,7 +84,7 @@ def main():
 	mouseclick(actions[2][0],actions[2][1])	
 	time.sleep(.125)
 	mouseclick(actions[3][0],actions[3][1])	
-	time.sleep(.125)
+	time.sleep(.20)
 
 
 
