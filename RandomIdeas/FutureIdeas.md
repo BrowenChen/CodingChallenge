@@ -20,7 +20,7 @@ Future Ideas:
 	Given tasks, seperate into daily versus weekly
 	Integration with Google Cal to automatically assign your days
 	Homework lists will be automatically assigned so you know exactly how to do what
-	Integrate SR learning and hollistic learning to maximize everything 
+	Integrate SR learning and hollistic learning to maximize everything.
 
 -LeanGains App
 	Calculates set macros for days with daily tracker.
@@ -43,6 +43,7 @@ OrganizeMe - organizes everything for you through google calendar. Learns when t
 -WebBookMarkGenerator
 
 -Generate a random fact of the day pulled from an rss feed or something. 
+	-Random lateral thinking exercises
 
 -Learn puns using spaced reptition
 
@@ -51,6 +52,9 @@ OrganizeMe - organizes everything for you through google calendar. Learns when t
 -Cheat sheet generator. Learn hotkeys easily.
 
 -pdf parser, take table of contents of a book with py2pdf and make anki front cards format
+
+-Python autoclicker Bot
+
 
 
 								
