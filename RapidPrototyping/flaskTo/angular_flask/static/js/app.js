@@ -31,7 +31,7 @@ angular.module('AngularFlask', ['angularFlaskServices'])
 		})
         .when('/classroom', {
         	templateUrl: 'static/partials/classroom.html',
-        	controller: 'StudentController'
+        	controller: StudentController
         })
 		.otherwise({
 			redirectTo: '/'
