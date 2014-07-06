@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+   <meta charset='utf-8' />
+   <link rel="stylesheet" src="style.css" />
+   <script src="http://code.jquery.com/jquery-1.8.2.js"></script>
+   <script src="https://apis.google.com/js/client.js"></script>
+   <script type="text/javascript">
+     var PROJECT_ID = 'mystical-studio-615  ';
+     var CLIENT_ID = '549281989393-ok3m5pg3qrcklpro21n1l37utq94om2q.app googleusercontent.com';
+     var API_KEY = 'AIzaSyAgHScAcaa_B1TI5wBvrAcfwYgsDBGaw1M';
+     var SCOPES = 'https://www.googleapis.com/auth/compute';
+
+     /**
+      * Authorize Google Compute Engine API.
+      */
+     function authorization() {
+       gapi.client.setApiKey(API_KEY);
+       gapi.auth.authorize({
+         client_id: CLIENT_ID,
+         scope: SCOPES,
+         immediate: false
+       }, function(authResult) {
+            if (authResult && !authResult.error) {
+              window.alert('Auth was successful!');
+            } else {
+              window.alert('Auth was not successful');
+            }
+          }
+       );
+     }
+
+
+     /**
+      * Driver for sample application.
+      */
+     // $(window).load(function(){
+     //  alert('eafef');
+     // }); 
+     $(window).load(authorization());
+    </script>
+  </head>
+  <body>
+  </body>
+</html>

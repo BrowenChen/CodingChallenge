@@ -1,0 +1,44 @@
+extends layout
+
+block content
+	div
+		h1= title
+		p Welcome to #{title}
+		//- a(href='/auth/google') Sign in with google
+
+	script.
+		var PROJECT_ID = 'mystical-studio-615';
+		var CLIENT_ID = '549281989393-ok3m5pg3qrcklpro21n1l37utq94om2q.apps.googleusercontent.com';
+		var API_KEY = 'AIzaSyAgHScAcaa_B1TI5wBvrAcfwYgsDBGaw1M';
+		var SCOPES = 'https://www.googleapis.com/auth/compute';
+
+
+		/**
+		* Authorize Google Compute Engine API.
+		*/
+		function authorization() {
+			console.log('run autherisze -' + API_KEY);
+			gapi.client.setApiKey(API_KEY);
+			gapi.auth.authorize({
+				client_id: CLIENT_ID,
+				scope: SCOPES,
+				immediate: false
+				}, function(authResult) {
+						if (authResult && !authResult.error) {
+						window.alert('Auth was successful!');
+					} 
+					else {
+						window.alert('Auth was not successful');
+					}
+				}
+			);
+		}
+
+		/**
+		* Driver for sample application.
+		*/
+
+		$(document).ready(function() {
+			authorization();
+
+			});

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title> title </title>
+    	<link rel='stylesheet' href='/stylesheets/style.css' />
+    	<link rel='stylesheet' href='//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css' />    	
+    	<link rel='stylesheet' href='/stylesheets/main.css' />
+    	<script src="/bower_components/angular/angular.js"></script>
+
+
+
+<!-- /*    	<style> 
+    	.done{text-decoration: line-through; color:#ccc;}
+    	</style>*/ -->
+	</head>
+
+
+	<body>
+
+		<div ng-controller='todoController'>
+			<!-- {{title}} asdasdas -->
+<!-- 			{{todos}}
+			<form name='frm' ng-submit='addTodo()'>
+				<input type='text' name='newtodo' ng-model='newTodo' required>
+				<button>Go </button>
+			</form>
+			<button ng-click='clearCompleted()'> Clear Completed</button>
+
+			<ul>
+				<li ng-repeat='todo in todos'> -->
+<!-- 					<input type='checkbox' ng-model='todo.done'>
+					<span ng-class="{'done':todo.done}"> {{todo.title}}</span>
+					{{todo.title}}
+				</li>
+
+
+			</ul> -->
+
+		</div>
+
+
+		<script type="text/javascript">
+		angular.module('ToDo', []);
+
+		ToDo.controller('todoController', ['$scope', function($scope){
+			$scope.title = "todo";
+
+
+		}]);
+
+
+		// angular.module('ToDo', []).
+		// controller('todoController', ['$scope', function($scope){
+		// 	$scope.todos = [ 
+		// 		{'title': 'Build a to do app', 'done': false}
+		// 	];
+
+
+
+		// 	$scope.addTodo = function(){
+		// 		$scope.todos.push({'title', $scope.newTodo, 'done':false})
+		// 		#scope.newtodo = ''
+		// 	}
+		// 	$scope.clearCompleted = function(){
+		// 		this.todos = []
+		// 	}
+
+
+		// }])
+
+
+		</script>
+
+		<div class="container">
+			<div class="navbar navbar-default">
+				<div class="container"> 
+					<div class="navbar-header"> 
+						<a navbar-brand href="/"> appname </a>
+					</div>
+				</div>
+				
+			</div>
+		</div>
+
+		<div class="container jumbotron" style="background-color:beige;">
+			<h1> <strong>ToDO</strong></h1>
+			<p> Welcome to Todo App</p>
+			<p>TESTSTS</p>
+
+
+			<div class="menu">
+				<h2> Menu </h2>
+				<ul class="nav nav-pills"> 
+					<li> <a href="/"> Home </a> </li>
+					<li class="active"> <a href="/tasks"> Todo List </a> </li>	
+				</ul>
+
+
+
+			</div>
+
+			<div class="list">
+				<div class="item add-task">
+					<div class="action">
+						<form action='/tasks' method='post'>
+							<input type='hidden' value='true' name='all_done'>
+							<input type='hidden' value='locals._csrf' name='_csrf'>
+							<input type='submit' class='btn btn-success btn-xs' value='all done'>
+						</form>
+
+
+						<form action="/tasks" method='post'>
+
+							<input type='hidden' value='locals._csrf' name='_csrf'>
+							<div class='name'>
+								<input type='text' name='name' placeholder='Add a new task'>
+							</div>
+
+							<div class="delete">
+								<input class="btn btn-primary btn-sm" type='submit' value='add'>
+							</div>
+
+						</form>
+
+					</div>
+				</div>
+			</div>
+
+		</div>
+	</body>
+
+</html>

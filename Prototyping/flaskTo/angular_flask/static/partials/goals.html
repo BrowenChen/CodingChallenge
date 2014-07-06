@@ -1,0 +1,71 @@
+<div class="well">
+
+
+<form style="min-height: 500px;">
+  <fieldset>
+    <legend>Goal Manager</legend>
+<!-- TABS -->
+	<ul id="daily" class="nav nav-tabs" role="tablist">
+	  <li class="active"><a href="#daily">Daily</a></li>
+	  <li><a href="#weekly">Weekly</a></li>
+	  <li><a href="#">Long Term</a></li>
+	</ul>
+
+
+    <label><strong> Daily Goals </strong></label>
+    <input type="text" placeholder="Enter a goal here" autofocus>
+    <span class="help-block">Prioritize goals. Pick the top three and list them here..</span>
+
+    <div class="list">
+    	<div class='item add-task'>
+    		<div class="action">
+    			<form action='/tasks', method='post'>
+    				
+    			</form>
+    		</div>
+    	</div>
+    </div>
+
+
+
+
+    <label class="checkbox">
+      <input type="checkbox"> Check me out
+    </label>
+    <button type="submit" class="btn btn-success">Submit</button>
+
+
+
+<br>
+<br>
+<hr>
+  </fieldset>
+</form>
+
+
+<div class="jumbotron" style="min-height: 500px;">
+
+
+	<ul id='weekly' class="nav nav-tabs" role="tablist">
+	  <li><a href="#daily">Daily</a></li>
+	  <li class="active"><a href="#weekly">Weekly</a></li>
+	  <li><a href="#">Long Term</a></li>
+	</ul>
+
+	<label>Weekly Goals</label>
+    <input type="text" placeholder="Enter a goal here">
+    <span class="help-block">Here are your weekly goals</span>
+    <label class="checkbox">
+      <input type="checkbox"> Check me out
+    </label>    
+    <button type="submit" class="btn btn-success">Submit</button>
+
+
+</div>
+
+
+</div>
+
+
+
+

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html ng-app='Todo'>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.10/angular.min.js"></script>
+
+    <link rel='stylesheet' href='//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css' />    
+  </head>
+  <body>
+    <h1><%= title %></h1>
+    <p>Welcome to <%= title %></p>
+
+    <button><a href="/tasks"> Tasks </a> </button>
+
+
+
+    <div class='container' ng-app='Todo'> 
+    	<div class="well" ng-controller='todoController'>
+    		{{title}}
+
+    	</div>
+
+
+    </div>
+
+    <script>
+    	angular.module('Todo', [])
+    		.controller('todoController', [$scope, function$scope]{
+    			$scope.title = "todo";
+
+
+    		})
+
+    </script>
+
+    
+  </body>
+</html>
