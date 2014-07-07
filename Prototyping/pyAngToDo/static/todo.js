@@ -148,3 +148,44 @@ angular
         }
     ])
     ;
+
+    
+
+
+
+//Student 
+function StudentController($scope){
+
+  $scope.studentDescription = "Owen";
+  $scope.action = "None Set";
+  $scope.studentNumber = 0;
+  $scope.rightNumber = 0;
+  $scope.wrongNumber = 0;
+
+  $scope.studentList = []; 
+
+
+  $scope.addRightCount = function(){
+    this.rightNumber++;
+  };
+
+  $scope.addWrongCount = function(){
+    this.wrongNumber++;
+  };
+
+  $scope.addStudent = function(student){
+    this.studentList.push(student);
+  };
+
+
+  $scope.removeAllStudents = function(){
+    this.studentList = [];
+  }
+
+  $scope.studentOwen = {
+    name: "Owen",
+    status: {rightNumber: 0, 
+             wrongNumber: 0}
+  };  
+};
+

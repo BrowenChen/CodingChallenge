@@ -1,64 +1,187 @@
-<navtabs page-name="state.pageName"></navtabs>
-<div class="paddinglr10">
-  <h1>ClassRoom Module Goals</h1>
-  <form ng-submit="addItem()">
-    <fieldset>
-    <!--   <input type="text" placeholder="Add something.." size=50 ng-model="state.newItem" />
-      <button class="btn btn-primary">Add Item</button> -->
-      <br> <hr>
-
-    </fieldset>
-  </form>
-
-  <button class="btn" ng-click="setAndRetrieveLastNItems(5)">
-  Retrieve last 5 items
-  </button>
-  <button class="btn" ng-click="setAndRetrieveLastNItems(10)">
-  Retrieve last 10 items
-  </button>
-  <button class="btn" ng-click="setAndRetrieveLastNItems(15)">
-  Retrieve last 15 items
-  </button>
-  <button class="btn" ng-click="addGoal()">
-  Add a goal
-  </button>
-  <button class="btn" ng-click="resetGoals()">
-  Reset goals
-  </button>
-
-  <div class='well' ng-model='goals'>
-    <strong>Goals Here:</strong>
-    <input type= "text" placeholder="Add a goal here.." size=50 ng-model="newgoal">
-    <button class="btn btn-primary" ng-click="addGoal(newgoal)">Add goal </button>
-    <br>
-     
-    <!-- {{goals}} -->
-<!--     <ul ng-repeat="goal in goals">
-      <li ng-model="goal"> {{goal}} </li>
-    </ul>
- -->  
+<!-- <navtabs page-name="state.pageName"></navtabs> -->
+  <nav class="navbar navbar-default navbar-fixed-top" role="navigation">    
+    <div class="container">
+      <div class="row">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="col-md-2 col-sm-2 col-xs-12">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a href="#" class="navbar-brand img-circle"><img src="" alt="Zzish Logo here"></a>
+          </div>
+        </div>        
+        
+        <div class="col-md-10 col-sm-10 col-xs-12">
+          <div class="navbar-collapse collapse menu">          
+            <ul class="nav navbar-nav navbar-right">
+              <li><a href="#home"><i class="fa fa-home"></i>Home</a></li>
+              <li><a href="#about"><i class="fa fa-user"></i>About Us</a></li>
+              <li><a href="#services"><i class="fa fa-cogs"></i>Services</a></li>
+              <li><a href="#portfolio"><i class="fa fa-briefcase"></i>Portfolio</a></li>
+              <li><a href="#blog"><i class="fa fa-pencil"></i>Blog</a></li>
+              <li><a href="#contact"><i class="fa fa-envelope"></i>Contact</a></li>
+            </ul>
+          </div><!-- /.navbar-collapse -->
+        </div>
+      </div><!-- /.row -->
     </div>
+  </nav>
 
-  <table class="table">
-    <thead>
-      <th>Number</th>
-      <th>Text</th>
-    </thead>
-    <tbody>
-      <tr ng-repeat="goal in goals" ng-model='goals'>
+  <hr>
+  <br>
+  
 
-        <td> 
-         <input id="demo_box_2" class="css-checkbox" type="checkbox" ng-model="targetGoal" ng-click="finishGoal(goal)" >
-          <label for="demo_box_2" name="demo_lbl_2" class="css-label">{{goal.title}}</label>
-          </td>
-        <td>
-         <input id="demo_box_1" class="css-checkbox" type="checkbox" ng-model="targetGoal" ng-click="inProgress(goal)" >
-          <label for="demo_box_1" name="demo_lbl_1" class="css-label">{{goal.done}}</label>
+ <section id="about">
+    <div class="outer_container" style:"min-height:400px;">
+      <div class="container">
+        <div class="row">
+          <div class="col col-md-5 col-sm-12"><h1>Cla Test</h1></div>
+          <div class="col col-md-7 col-sm-12 center-row" id="about_content">
+            <div class="row center">
+              <div class="col col-md-4 col-sm-12 templatemo_ceo">
+                <img src="../static/images/face-samir.png" alt="Linda" class="center-block img-circle img-responsive">
+                <p>Samir, CTO</p>
+              </div>
+              <div class="col col-md-8 col-sm-12">
+                <p>asdasdas <a href="#">asdasdas</a> based on Boasdasdasdasdaste.</p>
+                <p>Vestibulum ac enim.Vestibulum at mollis justo, eu elementum nisi. Sed consequat odio eget nunc tristique venenatis. Nullam non eros molestie, tristique libero ut, lacinia diam.</p>
+                <p>Integer hendrerit nibh at aliquam tincidunt. Duis auctor congue arcu eget congue. Vestibulum tristique sollicitudin est, non porttitor est viverra quis.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
 
 
-        </td>
-      </tr>
-    </tbody>
-  </table>
-</div>
+<section id="team">
+    <div class="outer_container">
+      <div class="container">
+        <div class="paddinglr10">
+          <h1>Agenda</h1>
+          <form ng-submit="addItem()">
+            <fieldset>
+            <!--   <input type="text" placeholder="Add something.." size=50 ng-model="state.newItem" />
+              <button class="btn btn-primary">Add Item</button> -->
+              <br> <hr>
+
+            </fieldset>
+          </form>
+
+          <button class="btn" ng-click="setAndRetrieveLastNItems(5)">
+          Retrieve last 5 items
+          </button>
+          <button class="btn" ng-click="setAndRetrieveLastNItems(10)">
+          Retrieve last 10 items
+          </button>
+          <button class="btn" ng-click="setAndRetrieveLastNItems(15)">
+          Retrieve last 15 items
+          </button>
+          <button class="btn" ng-click="addGoal()">
+          Add a goal
+          </button>
+          <button class="btn" ng-click="resetGoals()">
+          Reset goals
+          </button>
+
+          <div class='well' ng-model='goals'>
+            <strong>Tasks Here:</strong>
+            <input type= "text" placeholder="Add a task here.." size=50 ng-model="newgoal">
+            <button class="btn btn-primary" ng-click="addGoal(newgoal)">Add Tasks </button>
+            <br>
+             
+            <!-- {{goals}} -->
+        <!--     <ul ng-repeat="goal in goals">
+              <li ng-model="goal"> {{goal}} </li>
+            </ul>
+         -->  
+            </div>
+
+          <table class="table">
+            <thead>
+              <th>Number</th>
+              <th>Text</th>
+            </thead>
+            <tbody>
+              <tr ng-repeat="goal in goals" ng-model='goals'>
+
+                <td> 
+                 <input id="demo_box_2" class="css-checkbox" type="checkbox" ng-model="targetGoal" ng-click="finishGoal(goal)" >
+                  <label for="demo_box_2" name="demo_lbl_2" class="css-label">{{goal.title}}</label>
+                  </td>
+                <td>
+                 <input id="demo_box_1" class="css-checkbox" type="checkbox" ng-model="targetGoal" ng-click="inProgress(goal)" >
+                  <label for="demo_box_1" name="demo_lbl_1" class="css-label">{{goal.done}}</label>
+
+
+
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>       
+
+      </div>
+    </div>
+  </section>
+
+
+  <section id="services">
+    <div class="outer_container">
+      <div class="container">
+        <div class="row">
+          <div class="col col-md-5 col-sm-12 col-xs-12">
+            <h1>Student Info</h1>
+          </div>
+          <div class="col-md-2 col-sm-2 col-xs-2">
+            <div class="services_buttons">
+              <ul id="services_tabs">
+                <li class="icon-button active" data-target="#pencil"><i class="fa fa-pencil" style="vertical-align: middle"></i></li>
+                <li class="icon-button" data-target="#cog"><i class="fa fa-cog"></i></li>            
+                <li class="icon-button" data-target="#signal"><i class="fa fa-signal"></i></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col col-md-5 col-sm-10 col-xs-10 center-row" id="services_content">
+
+
+            
+
+<!-- 
+            <div class="arrow-left"></div>
+            <div class="arrow-box center-row">
+              <div class="tab-content center">              
+                <div class="tab-pane fade in active" id="pencil">
+                    <h3>Web Design</h3>
+                    <p>Donec vehicula lectus ac ultrices aliquam. Pellentesque aliquam erat justo, nec auctor sem vulputate vitae. Praesent varius neque in dolor cursus dictum. Donec dignissim nibh nec adipiscing vehicula.</p>
+                    <p><a href="#">Mobile website template</a> is ready to use for your website. Quisque euismod enim et dignissim dictum. Vivamus eu tortor pharetra, mollis orci eget, pulvinar nisl.</p>
+                </div>
+                <div class="tab-pane fade" id="cog">
+                  <h3>Online Marketing</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus tempor elit nec metus pellentesque posuere. Donec velit arcu, vehicula nec tellus eu.</p>
+                    <p>Vestibulum ac enim.Vestibulum at mollis justo, eu elementum nisi. Sed consequat odio eget nunc tristique venenatis. Nullam non eros molestie, tristique libero ut, lacinia diam.</p>
+                </div>
+                <div class="tab-pane fade" id="signal">
+                  <h3>Social Media</h3>
+                    <p>Quisque gravida ac nisl nec ultrices. Mauris tincidunt magna vitae feugiat tincidunt. Maecenas semper quis arcu in porta.</p>
+                    <p>Download <a rel="nofollow" href="http://www.tooplate.com">templates</a> for your websites. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aenean adipiscing quam sed neque dapibus, id convallis mauris eleifend. Quisque sit amet nisl a ante pulvinar sodales.</p>
+                </div>
+              </div>                                     
+            </div> -->
+
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+
