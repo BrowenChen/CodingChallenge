@@ -19,12 +19,223 @@
 <!-- CONTAINER FOR STUDENT INFO BOXES -->
   <section id="testContainer">
     <div class="outer_container well">
-      <div class="container">
+      <div class="container" ng-app ng-controller="StudentController">
         <div class='row'>
-          <!-- FIRST STUDENT INFO BOX -->
-          <div class="col col-md-3 well"> 
 
-            <input name='student-description' ng-model='studentDescription' ng-placeholder='Descrition Here'>
+
+          <!-- FIRST STUDENT INFO BOX -->
+          <div class="col col-md-3"> 
+            <br>
+            <div class='center-form panel'>
+
+
+                <div class='panel-body'>
+                  <form method="post" name="loginForm">
+
+
+                    <div class="row">
+                      <div class="col-md-4">
+                        <img src="../static/images/face-charles.png" alt="Avatar" id="stdAvatar" class="img-circle img-responsive">
+                      </div>
+
+                      <div class="col-md-8">                    
+                        <strong>Student:  {{studentDescription}}</strong>
+                        <div ng-app ng-controller="StudentController">
+                        
+                        <strong> Level 2</strong>
+                        </div>
+
+                        <div class="progress progress-striped">
+                          <div class="progress-bar" style="width: 45%;"></div>
+                        </div>                        
+                      </div>
+
+                    </div> 
+                  <div class="row" style="padding:.1cm;">                
+                    <hr>
+
+                      <!-- BUTTONS COL -->
+                      <div class="row" id="taskButtons">
+                        <div class="col-md-1">
+                        </div>
+
+                        <div class="col-md-2">
+                          <button type="submit" class="btn btn-sm btn-success" ng-click="addWrongCount()" style="width:40px;">- </button>                            
+                        </div>
+                        <div class="col-md-2">
+
+                          <button type="submit" class="btn btn-sm btn-success" ng-click="addRightCount()" style="width:40px;">+ </button>
+                       
+                        </div>
+                        <div class="col-md-2">
+
+
+                          <button type="submit" class="btn btn-sm btn-success" ng-click="addRightCount()" style="width:40px;">+ </button>
+                        </div>                                                
+                        <div class="col-md-2">
+                          <button type="submit" class="btn btn-sm btn-success" ng-click="addWrongCount()" style="width:40px;">- </button>
+                        </div>
+                      </div>
+
+                      <div class="col-md-2">
+
+                      </div>
+<!-- END ONE ROW BUTTONS -->
+                      
+                      <br>     
+
+                      <div class="row" id="taskButtons">
+                        <div class="col-md-1">
+                        </div>
+
+                        <div class="col-md-2">
+                          <button type="submit" class="btn btn-sm btn-success" ng-click="addWrongCount()" style="width:40px;">- </button>                            
+                        </div>
+                        <div class="col-md-2">
+
+                          <button type="submit" class="btn btn-sm btn-success" ng-click="addRightCount()" style="width:40px;">+ </button>
+                       
+                        </div>
+                        <div class="col-md-2">
+
+
+                          <button type="submit" class="btn btn-sm btn-success" ng-click="addRightCount()" style="width:40px;">+ </button>
+                        </div>                                                
+                        <div class="col-md-2">
+                          <button type="submit" class="btn btn-sm btn-success" ng-click="addWrongCount()" style="width:40px;">- </button>
+                        </div>
+                      </div>
+
+                      <div class="col-md-2">
+
+                      </div>
+                   </div> <!-- END ROW -->
+
+                    </div>
+
+
+                </div>
+            <!-- END OF STUDENT INFO -->
+                  <input name='student-description' ng-model='studentDescription' ng-placeholder='Descrition Here'>
+
+                   <div class="row" style="padding:.1cm;">
+                      <br>
+                      <div class="btn btn-default"> R: <span class="badge">{{rightNumber}}</span> 
+
+                      <br>
+
+                      W: <span class="badge">{{wrongNumber}}</span> 
+
+                      
+                      <br>
+                      Overall: <span class="badge">{{rightNumber}} / {{wrongNumber + rightNumber}}</span></div>
+                      <br>  
+                      <br>      
+
+                    </div>
+
+
+
+          </div>
+          
+          
+
+          <div class="col col-md-3"> 
+            <br>
+            <div class='center-form panel'>
+
+
+                <div class='panel-body'>
+                  <form method="post" name="loginForm">
+
+
+                    <div class="row">
+                      <div class="col-md-4">
+                        <img src="../static/images/face-samir.png" alt="Avatar" id="stdAvatar" class="img-circle img-responsive">
+                      </div>
+
+                      <div class="col-md-8">                    
+                        <strong>Student:  {{studentDescription}}</strong>
+                        <div ng-app ng-controller="StudentController">
+                        
+                        <strong> Level 2</strong>
+                        </div>
+
+                        <div class="progress progress-striped">
+                          <div class="progress-bar" style="width: 45%;"></div>
+                        </div>                        
+                      </div>
+
+                    </div> 
+
+                  <div class="row" style="padding:.1cm;">                
+                    <hr>
+
+                           <!-- BUTTONS COL -->
+                      <div class="row" id="taskButtons">
+                        <div class="col-md-1">
+                        </div>
+
+                        <div class="col-md-2">
+                          <button type="submit" class="btn btn-sm btn-success" ng-click="addWrongCount()" style="width:40px;">- </button>                            
+                        </div>
+                        <div class="col-md-2">
+
+                          <button type="submit" class="btn btn-sm btn-success" ng-click="addRightCount()" style="width:40px;">+ </button>
+                       
+                        </div>
+                        <div class="col-md-2">
+
+
+                          <button type="submit" class="btn btn-sm btn-success" ng-click="addRightCount()" style="width:40px;">+ </button>
+                        </div>                                                
+                        <div class="col-md-2">
+                          <button type="submit" class="btn btn-sm btn-success" ng-click="addWrongCount()" style="width:40px;">- </button>
+                        </div>
+                      </div>
+
+                      <div class="col-md-2">
+
+                      </div>
+<!-- END ONE ROW BUTTONS -->
+                      
+                      <br>     
+
+                      <div class="row" id="taskButtons">
+                        <div class="col-md-1">
+                        </div>
+
+                        <div class="col-md-2">
+                          <button type="submit" class="btn btn-sm btn-success" ng-click="addWrongCount()" style="width:40px;">- </button>                            
+                        </div>
+                        <div class="col-md-2">
+
+                          <button type="submit" class="btn btn-sm btn-success" ng-click="addRightCount()" style="width:40px;">+ </button>
+                       
+                        </div>
+                        <div class="col-md-2">
+
+
+                          <button type="submit" class="btn btn-sm btn-success" ng-click="addRightCount()" style="width:40px;">+ </button>
+                        </div>                                                
+                        <div class="col-md-2">
+                          <button type="submit" class="btn btn-sm btn-success" ng-click="addWrongCount()" style="width:40px;">- </button>
+                        </div>
+                      </div>
+
+                      <div class="col-md-2">
+
+                      </div>
+                   </div> <!-- END ROW -->
+
+                    </div>
+
+
+                </div> 
+          </div>
+          
+          
+          <div class="col col-md-3"> 
 
             <br>
             <div class='center-form panel'>
@@ -32,97 +243,188 @@
 
                 <div class='panel-body'>
                   <form method="post" name="loginForm">
-                    <img src="../static/images/student.png" alt="Avatar" id="stdAvatar" class="img-circle img-responsive">                    
-                    <strong>Student: Bob {{studentDescription}}</strong>
-                    <div ng-app ng-controller="StudentController">
-                                      
 
-                      <br>
-                      <button type="submit" class="btn btn-sm btn-success" ng-click="addRightCount()" style="width:50px;">+ Ans</button>
-                   
-                      
-                      <button type="submit" class="btn btn-sm btn-success" ng-click="addWrongCount()" style="width:50px;">- Ans</button>
+
+                    <div class="row">
+                      <div class="col-md-4">
+                        <img src="../static/images/student.png" alt="Avatar" id="stdAvatar" class="img-circle img-responsive">
+                      </div>
+
+                      <div class="col-md-8">                    
+                        <strong>Student:  {{studentDescription}}</strong>
+                        <div ng-app ng-controller="StudentController">
+                        
+                        <strong> Level 2</strong>
+                        </div>
+
+                        <div class="progress progress-striped">
+                          <div class="progress-bar" style="width: 45%;"></div>
+                        </div>                        
+                      </div>
+
+                    </div> 
+
+                  <div class="row" style="padding:.1cm;">                
+                    <hr>
+
+                      <!-- BUTTONS COL -->
+                      <div class="row" id="taskButtons">
+                        <div class="col-md-1">
+                        </div>
+
+                        <div class="col-md-2">
+                          <button type="submit" class="btn btn-sm btn-success" ng-click="addWrongCount()" style="width:40px;">- </button>                            
+                        </div>
+                        <div class="col-md-2">
+
+                          <button type="submit" class="btn btn-sm btn-success" ng-click="addRightCount()" style="width:40px;">+ </button>
+                       
+                        </div>
+                        <div class="col-md-2">
+
+
+                          <button type="submit" class="btn btn-sm btn-success" ng-click="addRightCount()" style="width:40px;">+ </button>
+                        </div>                                                
+                        <div class="col-md-2">
+                          <button type="submit" class="btn btn-sm btn-success" ng-click="addWrongCount()" style="width:40px;">- </button>
+                        </div>
+                      </div>
+
+                      <div class="col-md-2">
+
+                      </div>
+<!-- END ONE ROW BUTTONS -->
                       
                       <br>     
 
-                      <button type="submit" class="btn btn-sm btn-success" ng-click="addRightCount()" style="width:50px;">+ Ans</button>
-                       
-                      
-                      <button type="submit" class="btn btn-sm btn-default" ng-click="addWrongCount()" style="width:50px;">- Ans</button>
-         
-                      
-                      <br>
-                      <br>
-                      <div class="btn btn-default"> R: <span class="badge">{{rightNumber}} </span> W: <span class="badge">{{wrongNumber}}</span> 
-                      <br>
-                      Overall: <span class="badge">{{rightNumber}} / {{wrongNumber + rightNumber}}</span></div>
-                      <br>                      
+                      <div class="row" id="taskButtons">
+                        <div class="col-md-1">
+                        </div>
 
-                      <hr>
-                      
+                        <div class="col-md-2">
+                          <button type="submit" class="btn btn-sm btn-success" ng-click="addWrongCount()" style="width:40px;">- </button>                            
+                        </div>
+                        <div class="col-md-2">
+
+                          <button type="submit" class="btn btn-sm btn-success" ng-click="addRightCount()" style="width:40px;">+ </button>
+                       
+                        </div>
+                        <div class="col-md-2">
+
+
+                          <button type="submit" class="btn btn-sm btn-success" ng-click="addRightCount()" style="width:40px;">+ </button>
+                        </div>                                                
+                        <div class="col-md-2">
+                          <button type="submit" class="btn btn-sm btn-success" ng-click="addWrongCount()" style="width:40px;">- </button>
+                        </div>
+                      </div>
+
+                      <div class="col-md-2">
+
+                      </div>
+                   </div> <!-- END ROW -->
 
                     </div>
 
+
                 </div>
-            </div>
-
-
-
-
 
           </div>
           
-          
-
           <div class="col col-md-3"> 
+            <br>
             <div class='center-form panel'>
+
+
                 <div class='panel-body'>
                   <form method="post" name="loginForm">
-                    <strong>Student Info</strong>
-                    <div ng-app ng-controller="StudentController">
-
-                      <input name='student-description' ng-model='studentDescription' ng-placeholder='Descrition Here'>
-                      
-                      <p> Your Name <span style='color:red;'>{{studentDescription}}</span>! </p>
 
 
-                      <br>
+                    <div class="row">
+                      <div class="col-md-4">
+                        <img src="../static/images/gamification.png" alt="Avatar" id="stdAvatar" class="img-circle img-responsive">
+                      </div>
+
+                      <div class="col-md-8">                    
+                        <strong>Student:  {{studentDescription}}</strong>
+                        <div ng-app ng-controller="StudentController">
+                        
+                        <strong> Level 2</strong>
+                        </div>
+
+                        <div class="progress progress-striped">
+                          <div class="progress-bar" style="width: 45%;"></div>
+                        </div>                        
+                      </div>
+
+                    </div> 
+
+                  <div class="row" style="padding:.1cm;">                
+                    <hr>
+
+                      <!-- BUTTONS COL -->
+                      <div class="row" id="taskButtons">
+                        <div class="col-md-1">
+                        </div>
+
+                        <div class="col-md-2">
+                          <button type="submit" class="btn btn-sm btn-success" ng-click="addWrongCount()" style="width:40px;">- </button>                            
+                        </div>
+                        <div class="col-md-2">
+
+                          <button type="submit" class="btn btn-sm btn-success" ng-click="addRightCount()" style="width:40px;">+ </button>
+                       
+                        </div>
+                        <div class="col-md-2">
 
 
-                          <button type="submit" class="btn btn-sm btn-success" ng-click="addRightCount()">Add Right Answer</button>
-                      <br>   
-                      
-                      <button type="submit" class="btn btn-sm btn-success" ng-click="addWrongCount()">Add Wrong Answer</button>
+                          <button type="submit" class="btn btn-sm btn-success" ng-click="addRightCount()" style="width:40px;">+ </button>
+                        </div>                                                
+                        <div class="col-md-2">
+                          <button type="submit" class="btn btn-sm btn-success" ng-click="addWrongCount()" style="width:40px;">- </button>
+                        </div>
+                      </div>
+
+                      <div class="col-md-2">
+
+                      </div>
+
+<!-- END BUTTON ROWS -->
                       <br>     
-                      
-                      <br>
-                      <div class="btn btn-default"> Right Answers: {{rightNumber}} </div>
-                        <div class="btn btn-default"> Wrong Answers {{wrongNumber}} </div>
-                      <br>
+                      <!-- BUTTONS COL -->
+                      <div class="row" id="taskButtons">
+                        <div class="col-md-1">
+                        </div>
 
-                      <ul class="list-group">
-                        <li class="list-group-item">
-                          <span class="badge">14</span>
-                          Cras justo odio
-                        </li>
-                      </ul>
+                        <div class="col-md-2">
+                          <button type="submit" class="btn btn-sm btn-success" ng-click="addWrongCount()" style="width:40px;">- </button>                            
+                        </div>
+                        <div class="col-md-2">
 
-                      <hr>
-                      
+                          <button type="submit" class="btn btn-sm btn-success" ng-click="addRightCount()" style="width:40px;">+ </button>
+                       
+                        </div>
+                        <div class="col-md-2">
+
+
+                          <button type="submit" class="btn btn-sm btn-success" ng-click="addRightCount()" style="width:40px;">+ </button>
+                        </div>                                                
+                        <div class="col-md-2">
+                          <button type="submit" class="btn btn-sm btn-success" ng-click="addWrongCount()" style="width:40px;">- </button>
+                        </div>
+                      </div>
+
+                      <div class="col-md-2">
+
+                      </div>
+
+<!-- END BUTTON ROWS -->            
+                   </div> <!-- END ROW -->
 
                     </div>
 
-                </div>
-            </div>          
-          </div>
-          
-          
-          <div class="col col-md-3"> 
 
-          wasd
-          </div>
-          
-          <div class="col col-md-3"> 4 
+                </div>          
           </div>
         </div>
       </div>
@@ -134,12 +436,22 @@
     <div class="col-lg-4">
       <div class="panel panel-primary">
         <div class="panel-heading">
-          <h3 class="panel-title"><i class="fa fa-long-arrow-right"></i> Pie Chart</h3>
+          <h3 class="panel-title"><i class="fa fa-long-arrow-right"></i> Student Pie</h3>
         </div>
         <div class="panel-body">
           <div class="flot-chart">
+
+            <div class="container well">
+              <img src="../static/images/donut.png">
+            </div>
             <div class="flot-chart-content" id="flot-chart-pie"></div>
           </div>
+
+
+          <div class="progress progress-striped active">
+            <div class="progress-bar" style="width: 45%;"></div>
+          </div>
+
           <div class="text-right">
             <a href="#">View Details <i class="fa fa-arrow-circle-right"></i></a>
           </div>
@@ -149,11 +461,16 @@
     <div class="col-lg-8">
       <div class="panel panel-primary">
         <div class="panel-heading">
-          <h3 class="panel-title"><i class="fa fa-long-arrow-right"></i> Multiple Axes Line Graph  </h3>
+          <h3 class="panel-title"><i class="fa fa-long-arrow-right"></i> Multiple Axes Line Graph Students </h3>
         </div>
         <div class="panel-body">
           <div class="flot-chart">
-            <div class="flot-chart-content" id="flot-chart-multiple-axes"></div>
+
+            <div class="container well">
+              <img src="../static/images/graph.png">
+            </div>
+
+            <div class="flot-chart-content" id="flot-chart-multiple-axes"> </div>
           </div>
           <div class="text-right">
             <a href="#">View Details <i class="fa fa-arrow-circle-right"></i></a>
@@ -163,23 +480,6 @@
     </div>
   </div><!-- /.row -->
 </section>
-
-<section id="graphs">
-  <div class="row">
-    <div class="col-lg-12">
-      <div class="panel panel-primary">
-        <div class="panel-heading">
-          <h3 class="panel-title"><i class="fa fa-bar-chart-o"></i> Class Statistics: October 1, 2013 - October 31, 2013</h3>
-        </div>
-        <div class="panel-body">
-          <div id="morris-chart-area"></div>
-        </div>
-      </div>
-    </div>
-  </div><!-- /.row -->
-
-</section>
-
 
 <section id="notifications">
         <div class="row">
@@ -238,6 +538,25 @@
             </div>
           </div>
 </section>
+
+
+
+<section id="graphs">
+  <div class="row">
+    <div class="col-lg-12">
+      <div class="panel panel-primary">
+        <div class="panel-heading">
+          <h3 class="panel-title"><i class="fa fa-bar-chart-o"></i> Class Statistics: October 1, 2013 - October 31, 2013</h3>
+        </div>
+        <div class="panel-body">
+          <div id="morris-chart-area"></div>
+        </div>
+      </div>
+    </div>
+  </div><!-- /.row -->
+
+</section>
+
 
 <!-- SECTION FOR STUDENT INFO BOXES -->
 
