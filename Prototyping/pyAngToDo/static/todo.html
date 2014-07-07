@@ -139,49 +139,128 @@
           <div class="col col-md-5 col-sm-12 col-xs-12">
             <h1>Student Info</h1>
           </div>
-          <div class="col-md-2 col-sm-2 col-xs-2">
-            <div class="services_buttons">
-              <ul id="services_tabs">
-                <li class="icon-button active" data-target="#pencil"><i class="fa fa-pencil" style="vertical-align: middle"></i></li>
-                <li class="icon-button" data-target="#cog"><i class="fa fa-cog"></i></li>            
-                <li class="icon-button" data-target="#signal"><i class="fa fa-signal"></i></li>
-              </ul>
+
+            <div class="container">
+              <div class="row">
+
+                <div class='center-form panel'>
+                  <div class='panel-body'>
+
+                          <form method="post" name="loginForm">
+                          <div class="well">
+                            <strong>Student Info</strong> 
+                            <div ng-app ng-controller="StudentController">
+                              <input name='student-description' ng-model='studentDescription' ng-placeholder='Descrition Here'>
+                      
+                              <p> Your Name <span style='color:red;'>{{studentDescription}}</span>! </p> 
+
+                              <br>
+                                  <button type="submit" class="btn btn-sm btn-success" ng-click="addRightCount()">Add Right Answer</button>
+                              <br>
+
+                                  <button type="submit" class="btn btn-sm btn-success" ng-click="addWrongCount()">Add Wrong Answer</button>
+                              <br>                  
+
+                              <p>Input right answers: </p>
+
+
+                              <input name="right-number" ng-model='rightNumber' ng-placeholder='How many numbers did this person get right'> <br>
+
+                              <p>Input wrong answers: </p>
+                              <input name"wrong-number" ng-model='wrongNumber'  ng-placeholder='How many numbers did this person get right'> <br>
+
+                              <br>
+                              <div class="btn btn-default"> Right Answers: {{rightNumber}} </div>
+                                <div class="btn btn-default"> Wrong Answers {{wrongNumber}} </div>
+                              <br>
+              
+                              <hr>
+
+
+                            </div>
+                          </div>
+
+
+
+
+
+
+                          <button type="submit" class="btn btn-lg btn-block btn-success">Add Student</button>
+                          </form>
+                  </div>
+                </div>
+
+              </div>
+
             </div>
-          </div>
-          <div class="col col-md-5 col-sm-10 col-xs-10 center-row" id="services_content">
 
 
-            
 
-<!-- 
-            <div class="arrow-left"></div>
-            <div class="arrow-box center-row">
-              <div class="tab-content center">              
-                <div class="tab-pane fade in active" id="pencil">
-                    <h3>Web Design</h3>
-                    <p>Donec vehicula lectus ac ultrices aliquam. Pellentesque aliquam erat justo, nec auctor sem vulputate vitae. Praesent varius neque in dolor cursus dictum. Donec dignissim nibh nec adipiscing vehicula.</p>
-                    <p><a href="#">Mobile website template</a> is ready to use for your website. Quisque euismod enim et dignissim dictum. Vivamus eu tortor pharetra, mollis orci eget, pulvinar nisl.</p>
-                </div>
-                <div class="tab-pane fade" id="cog">
-                  <h3>Online Marketing</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus tempor elit nec metus pellentesque posuere. Donec velit arcu, vehicula nec tellus eu.</p>
-                    <p>Vestibulum ac enim.Vestibulum at mollis justo, eu elementum nisi. Sed consequat odio eget nunc tristique venenatis. Nullam non eros molestie, tristique libero ut, lacinia diam.</p>
-                </div>
-                <div class="tab-pane fade" id="signal">
-                  <h3>Social Media</h3>
-                    <p>Quisque gravida ac nisl nec ultrices. Mauris tincidunt magna vitae feugiat tincidunt. Maecenas semper quis arcu in porta.</p>
-                    <p>Download <a rel="nofollow" href="http://www.tooplate.com">templates</a> for your websites. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aenean adipiscing quam sed neque dapibus, id convallis mauris eleifend. Quisque sit amet nisl a ante pulvinar sodales.</p>
-                </div>
-              </div>                                     
-            </div> -->
-
-
-          </div>
         </div>
       </div>
     </div>
   </section>
 
+
+  <section id="testContainer">
+    <div class="outer_container">
+      <div class="container">
+        <div class='row'>
+          <!-- FIRST STUDENT INFO BOX -->
+          <div class="col col-md-3"> 
+
+            <div class='center-form panel'>
+                <div class='panel-body'>
+                  <form method="post" name="loginForm">
+                    <strong>Student Info</strong>
+                    <div ng-app ng-controller="StudentController">
+
+                      <input name='student-description' ng-model='studentDescription' ng-placeholder='Descrition Here'>
+                      
+                      <p> Your Name <span style='color:red;'>{{studentDescription}}</span>! </p>
+                      
+
+                      <br>
+                          <button type="submit" class="btn btn-sm btn-success" ng-click="addRightCount()">Add Right Answer</button>
+                      <br>   
+                      
+                      <button type="submit" class="btn btn-sm btn-success" ng-click="addWrongCount()">Add Wrong Answer</button>
+                      <br>     
+                      
+                      <br>
+                      <div class="btn btn-default"> Right Answers: {{rightNumber}} </div>
+                        <div class="btn btn-default"> Wrong Answers {{wrongNumber}} </div>
+                      <br>
+
+                      <hr>
+                      
+
+                    </div>
+
+                </div>
+            </div>
+
+
+
+
+
+          </div>
+          
+          
+
+          <div class="col col-md-3"> 2 
+          </div>
+          
+          
+          <div class="col col-md-3"> 3 
+          </div>
+          
+          <div class="col col-md-3"> 4 
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
 
 
