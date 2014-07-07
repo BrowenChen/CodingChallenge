@@ -1,0 +1,64 @@
+<navtabs page-name="state.pageName"></navtabs>
+<div class="paddinglr10">
+  <h1>ClassRoom Module Goals</h1>
+  <form ng-submit="addItem()">
+    <fieldset>
+    <!--   <input type="text" placeholder="Add something.." size=50 ng-model="state.newItem" />
+      <button class="btn btn-primary">Add Item</button> -->
+      <br> <hr>
+
+    </fieldset>
+  </form>
+
+  <button class="btn" ng-click="setAndRetrieveLastNItems(5)">
+  Retrieve last 5 items
+  </button>
+  <button class="btn" ng-click="setAndRetrieveLastNItems(10)">
+  Retrieve last 10 items
+  </button>
+  <button class="btn" ng-click="setAndRetrieveLastNItems(15)">
+  Retrieve last 15 items
+  </button>
+  <button class="btn" ng-click="addGoal()">
+  Add a goal
+  </button>
+  <button class="btn" ng-click="resetGoals()">
+  Reset goals
+  </button>
+
+  <div class='well' ng-model='goals'>
+    <strong>Goals Here:</strong>
+    <input type= "text" placeholder="Add a goal here.." size=50 ng-model="newgoal">
+    <button class="btn btn-primary" ng-click="addGoal(newgoal)">Add goal </button>
+    <br>
+     
+    <!-- {{goals}} -->
+<!--     <ul ng-repeat="goal in goals">
+      <li ng-model="goal"> {{goal}} </li>
+    </ul>
+ -->  
+    </div>
+
+  <table class="table">
+    <thead>
+      <th>Number</th>
+      <th>Text</th>
+    </thead>
+    <tbody>
+      <tr ng-repeat="goal in goals" ng-model='goals'>
+
+        <td> 
+         <input id="demo_box_2" class="css-checkbox" type="checkbox" ng-model="targetGoal" ng-click="finishGoal(goal)" >
+          <label for="demo_box_2" name="demo_lbl_2" class="css-label">{{goal.title}}</label>
+          </td>
+        <td>
+         <input id="demo_box_1" class="css-checkbox" type="checkbox" ng-model="targetGoal" ng-click="inProgress(goal)" >
+          <label for="demo_box_1" name="demo_lbl_1" class="css-label">{{goal.done}}</label>
+
+
+
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
