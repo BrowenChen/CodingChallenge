@@ -4,11 +4,11 @@ angular
         $routeProvider
             .when('/', {
                 templateUrl: '../static/todo.html',
-                controller: 'TodoController'
+                controller: 'StudentController'
             })
             .when('/secondPage', {
-                templateUrl: '../static/secondPage.html',
-                controller: 'SecondController'
+                templateUrl: '../static/singlePage.html',
+                controller: 'StudentController'
             })
             .otherwise({ redirectTo: '/' });
     }])
@@ -126,6 +126,24 @@ angular
             ]
         };
     })
+    //SCROLLING DIRECTIVE
+    .directive('scrollOnClick', function() {
+      return {
+        restrict: 'A',
+        link: function(scope, $elm, attrs) {
+          var idToScroll = attrs.href;
+          $elm.on('click', function() {
+            var $target;
+            if (idToScroll) {
+              $target = $(idToScroll);
+            } else {
+              $target = $elm;
+            }
+            $("body").animate({scrollTop: $target.offset().top}, "slow");
+          });
+        }
+      }
+    })
     .directive('tab', function() {
         return {
             require: '^navtabs',
@@ -191,6 +209,9 @@ function StudentController($scope){
   };  
 
 
+
+
+// ***********************************************
 //CLASSROOM MODULE FOR DARYL
 
 
@@ -210,6 +231,27 @@ function StudentController($scope){
     $scope.progress = 0;
     $scope.imgUrl = "";
 
+
+/***
+@function Initializes student variables from API call
+
+
+@params Student object from API gives student ID, student Name
+Student level, Student task details, Student overall Progress
+Image for avatar
+
+
+
+***/
+    // $scope.setStudentDetails = function(student){
+    //     this.addName(student.name);
+    //     this.addID(student.id);
+    //     this.addLevel(student.level);
+    //     this.addProgress(student.progress);
+    //     this.addImg(student.img);
+    // }
+
+
     $scope.addName = function(name){
         this.studentName = name;
     };
@@ -223,9 +265,29 @@ function StudentController($scope){
         this.progress = percent;
     };
 
+    $scope.addID = function(id){
+        this.studentID = id;
+    };
+
     $scope.addImg = function(img){
         this.imgUrl = img;
     };
 
+
+    //SCROLLING
+    // var container = angular.element(document.getElementById('container'));
+    // var section2 = angular.element(document.getElementById('section-2'));
+
+    // $scope.toTheTop = function() {
+    //   container.scrollTop(0, 5000);
+    // }
+
+    // $scope.toSection2 = function() {
+    //   container.scrollTo(section2, 0, 1000);
+
+
 };
 
+
+// ***********************************************
+//CLASSROOM MODULE FOR DARYL
