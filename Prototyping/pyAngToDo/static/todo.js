@@ -29,6 +29,8 @@ angular
             $scope.state.retrieveNr = $scope.RETRIEVE_DEFAULT_NR;
             $scope.state.pageName = 'todoList';
 
+//CLASSROOM MODULE FOR DARYL
+
 //NEW EDITING HERE```
             $scope.newgoal = "";
             $scope.goals = [];
@@ -187,5 +189,43 @@ function StudentController($scope){
     status: {rightNumber: 0, 
              wrongNumber: 0}
   };  
+
+
+//CLASSROOM MODULE FOR DARYL
+
+
+// DUMMY DATA AND TESTING
+    $scope.test = function(){
+        alert("test");
+    };
+    $scope.studentOwen = "Owen";  
+    $scope.studentCharles = "Charles";  
+// DUMMY DATA AND TESTING
+
+
+    $scope.studentID = "";
+    $scope.studentName = "";
+    $scope.level = 0;
+    $scope.tasks = {};
+    $scope.progress = 0;
+    $scope.imgUrl = "";
+
+    $scope.addName = function(name){
+        this.studentName = name;
+    };
+
+    $scope.addTask = function(task){
+        this.tasks.push(task);
+    };
+
+
+    $scope.addProgress = function(percent){
+        this.progress = percent;
+    };
+
+    $scope.addImg = function(img){
+        this.imgUrl = img;
+    };
+
 };
 
