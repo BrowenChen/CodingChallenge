@@ -28,15 +28,22 @@
 
 
 <!-- ==================MAIN SECTION======================= -->
-<section id="mainSection" ng-controller="StudentController">
+<section id="mainSection" ng-controller="StudentController" style="max-height: 500px;">
+<div class="container">
+
   <div class="row">
-    <div class="col-lg-4 col-sm-4 col-xs-12">
-      
+    <div class="col-lg-4 col-sm-4 col-xs-12" >
 
+      <div class="container" style="width:100%; height:100%">
+                    <div id="donut-example" style="height: 40%; width:95%;">
+                    </div>
+
+                    <div id="bar-example" style="height: 40%; width: 95%;" >
+                    </div>
+
+      </div>
 <!-- GRAPHS SECTIN FOR THE LEFT GRID -->
-
-
-
+<!-- 
               <div class="panel panel-primary">
                 <div class="panel-heading">
                   <h3 class="panel-title">
@@ -46,19 +53,10 @@
                   </h3>
                 </div>
                 <div class="panel-body">
-                  <div class="panel-body">
-                    <div id="donut-example" style="max-height: 175px;">
-                    </div>
-
-                    <div id="bar-example" style="max-height: 250px;">
-                    </div>
-                    
-                  </div>
                 </div>
               </div>
 <br>
-
-          
+ -->     
 <!-- GRAPHS SECTIN FOR THE LEFT GRID -->
 
     </div>
@@ -68,12 +66,14 @@
   <div class="row">
     <div class="col-lg-2 col-sm-3 col-xs-4">
         <a href="#">
-             <img src="http://placehold.it/200x200" class="thumbnail img-responsive">
+        <div id="profile">
+             <img src="../static/images/face-charles.png" class="img-circle img-responsive" style="width:100%;">
+        </div>
         </a>
     </div>
      <div class="col-lg-2 col-sm-3 col-xs-4">
         <a href="#">
-             <img src="http://placehold.it/200x200" class="thumbnail img-responsive">
+             <img src="../static/images/face-samir.png" class="img-circle img-responsive">
         </a>
     </div>
      <div class="col-lg-2 col-sm-3 col-xs-4">
@@ -227,13 +227,17 @@
 
 </div>
 
-    
+</div> <!-- Container div -->
 </section>
 
 
 <!-- ==================MAIN SECTION======================= -->
 
 
+<br>
+<br><br>
+<br>
+<br>
 
 <!-- =====================MAIN CONTAINER===================== -->
 
