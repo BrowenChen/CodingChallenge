@@ -1,0 +1,82 @@
+<!-- Student Info Classroom Module -->
+<h2 class='text-center'> Classroom Module</h2>
+
+<div class="container">
+	<div class='center-form panel'>
+		<div class='panel-body well'>
+			<header><strong>Update</strong></header>
+			<br>
+
+          	<p>Which Student? </p>
+          	<input name="student-number" ng-model='studentNumber' ng-placeholder='Which Student do you want to update'> <br>
+
+          	<p>What action? </p>
+          	<input name"action" ng-model='action'  ng-placeholder='How many numbers did this person get right'> <br>
+
+          	Student {{studentNumber}} and action {{action}}. <br>
+          	{{studentList}} <br>
+
+          	<div class="btn btn-sm btn-success" ng-click="addStudent(studentOwen)">add Student Owen</div>
+
+          	<div class="btn btn-md btn-success" ng-click="removeAllStudents()"> Remove all students!!! </div>
+
+
+		</div>
+	</div>
+	
+</div>
+
+
+<div class="container">
+	<div class="row">
+
+		<div class='center-form panel'>
+			<div class='panel-body'>
+
+	          	<form method="post" name="loginForm">
+	          	<div class="well">
+	          		<strong>Student Info</strong>	
+		          	<div ng-app ng-controller="StudentController">
+			          	<input name='student-description' ng-model='studentDescription' ng-placeholder='Descrition Here'>
+			    
+			          	<p> Your Name <span style='color:red;'>{{studentDescription}}</span>! </p> 
+
+			          	<br>
+      		            <button type="submit" class="btn btn-sm btn-success" ng-click="addRightCount()">Add Right Answer</button>
+			          	<br>
+
+      		            <button type="submit" class="btn btn-sm btn-success" ng-click="addWrongCount()">Add Wrong Answer</button>
+			          	<br>			          	
+
+			          	<p>Input right answers: </p>
+
+
+			          	<input name="right-number" ng-model='rightNumber' ng-placeholder='How many numbers did this person get right'> <br>
+
+			          	<p>Input wrong answers: </p>
+			          	<input name"wrong-number" ng-model='wrongNumber'  ng-placeholder='How many numbers did this person get right'> <br>
+
+			          	<br>
+			          	<div class="btn btn-primary"> Right Answers: {{rightNumber}} </div>
+  			          	<div class="btn btn-default"> Wrong Answers {{wrongNumber}} </div>
+			            <br>
+	
+			          	<hr>
+
+
+		          	</div>
+	          	</div>
+
+
+
+
+
+
+	            <button type="submit" class="btn btn-lg btn-block btn-success">Add Student</button>
+	          	</form>
+			</div>
+		</div>
+
+	</div>
+
+</div>

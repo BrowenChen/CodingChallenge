@@ -12,7 +12,7 @@ Morris.Donut({
   ],
   backgroundColor: '#ddd',
   labelColor: '#060',
-  
+  resizing:true,
   colors: [
     '#0BA462',
     '#DADC86',
@@ -33,5 +33,6 @@ Morris.Bar({
   xkey: 'y',
   ykeys: ['a', 'b', 'c'],
   labels: ['Exceeding', 'Passing', 'Failing'],
-  stacked: true
+  stacked: true,
+  resizing: true
 });

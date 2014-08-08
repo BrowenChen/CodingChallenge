@@ -1,0 +1,741 @@
+extends layout
+
+block content
+	#page-wrapper
+			.row
+					.col-lg-12
+						h1
+							| Classroom DashBoard
+							small
+								| Teacher Module
+						.alert.alert-success.alert-dismissable
+							button.close(type='button', data-dismiss='alert', aria-hidden='true')
+								| ×
+							| Welcome Mrs. Jones. Here is your pesonalized classroom module. Here you can analyze and track your students live progress. Enjoy.
+				//
+					 /.row 
+			//
+				 CONTAINER FOR STUDENT INFO BOXES 
+			section#testContainer
+				.outer_container.well
+					.container(ng-app='ng-app', ng-controller='StudentController')
+						.row
+							.row
+								.col-md-3
+									.panel.panel-info
+										.panel-heading
+											.row
+												.col-xs-6
+													//
+																
+														<i class="fa fa-comments fa-5x">
+														</i>
+													img#stdAvatar.img-circle.img-responsive(src='../static/images/face-charles.png', alt='Avatar')
+												.col-xs-6.text-left(ng-model='studentName')
+													strong
+														| {{studentOwen}}
+														br
+													| L: {{level}}
+													.progress.progress-striped
+														.progress-bar(style='width: 45%;')
+										a(href='#')
+											.panel-footer.announcement-bottom
+												.row
+													//
+														 BUTTONS COL 
+													#taskButtons.row
+														.col-md-1
+														.col-md-2
+															button.btn.btn-sm.btn-success(type='submit', ng-click='addWrongCount()')
+																| -
+														.col-md-2
+															button.btn.btn-sm.btn-success(type='submit', ng-click='addRightCount()')
+																| +
+														.col-md-2
+															button.btn.btn-sm.btn-success(type='submit', ng-click='addRightCount()')
+																| +
+														.col-md-2
+															button.btn.btn-sm.btn-success(type='submit', ng-click='addWrongCount()')
+																| -
+													.col-md-2
+													br
+													//
+														 END BUTTONS HERE 
+													//
+														 BUTTONS COL 
+													#taskButtons.row
+														.col-md-1
+														.col-md-2
+															button.btn.btn-sm.btn-success(type='submit', ng-click='addWrongCount()')
+																| -
+														.col-md-2
+															button.btn.btn-sm.btn-success(type='submit', ng-click='addRightCount()')
+																| +
+														.col-md-2
+															button.btn.btn-sm.btn-success(type='submit', ng-click='addRightCount()')
+																| +
+														.col-md-2
+															button.btn.btn-sm.btn-success(type='submit', ng-click='addWrongCount()')
+																| -
+													.col-md-2
+													br
+													//
+														 END BUTTONS HERE 
+								.col-md-3
+									.panel.panel-info
+										.panel-heading
+											.row
+												.col-xs-6
+													//
+																
+														<i class="fa fa-comments fa-5x">
+														</i>
+													img#stdAvatar.img-circle.img-responsive(src='../static/images/face-charles.png', alt='Avatar')
+												.col-xs-6.text-left
+													strong
+														| {{studentCharles}}
+													br
+													| L: {{level}}
+													.progress.progress-striped
+														.progress-bar(style='width: 45%;')
+										a(href='#')
+											.panel-footer.announcement-bottom
+												.row
+													//
+														 BUTTONS COL 
+													#taskButtons.row
+														.col-md-1
+														.col-md-2
+															button.btn.btn-sm.btn-success(type='submit', ng-click='addWrongCount()')
+																| -
+														.col-md-2
+															button.btn.btn-sm.btn-success(type='submit', ng-click='addRightCount()')
+																| +
+														.col-md-2
+															button.btn.btn-sm.btn-success(type='submit', ng-click='addRightCount()')
+																| +
+														.col-md-2
+															button.btn.btn-sm.btn-success(type='submit', ng-click='addWrongCount()')
+																| -
+													.col-md-2
+													br
+													//
+														 END BUTTONS HERE 
+													//
+														 BUTTONS COL 
+													#taskButtons.row
+														.col-md-1
+														.col-md-2
+															button.btn.btn-sm.btn-success(type='submit', ng-click='addWrongCount()')
+																| -
+														.col-md-2
+															button.btn.btn-sm.btn-success(type='submit', ng-click='addRightCount()')
+																| +
+														.col-md-2
+															button.btn.btn-sm.btn-success(type='submit', ng-click='addRightCount()')
+																| +
+														.col-md-2
+															button.btn.btn-sm.btn-success(type='submit', ng-click='addWrongCount()')
+																| -
+													.col-md-2
+													br
+													//
+														 END BUTTONS HERE 
+								.col-md-3
+									.panel.panel-success
+										.panel-heading
+											.row
+												.col-xs-6
+													//
+																
+														<i class="fa fa-comments fa-5x">
+														</i>
+													img#stdAvatar.img-circle.img-responsive(src='../static/images/face-charles.png', alt='Avatar')
+												.col-xs-6.text-left
+													strong
+														| Charles
+													| Level 2
+													.progress.progress-striped
+														.progress-bar(style='width: 45%;')
+										a(href='#')
+											.panel-footer.announcement-bottom
+												.row
+													//
+														 BUTTONS COL 
+													#taskButtons.row
+														.col-md-1
+														.col-md-2
+															button.btn.btn-sm.btn-success(type='submit', ng-click='addWrongCount()')
+																| -
+														.col-md-2
+															button.btn.btn-sm.btn-success(type='submit', ng-click='addRightCount()')
+																| +
+														.col-md-2
+															button.btn.btn-sm.btn-success(type='submit', ng-click='addRightCount()')
+																| +
+														.col-md-2
+															button.btn.btn-sm.btn-success(type='submit', ng-click='addWrongCount()')
+																| -
+													.col-md-2
+													br
+													//
+														 END BUTTONS HERE 
+													//
+														 BUTTONS COL 
+													#taskButtons.row
+														.col-md-1
+														.col-md-2
+															button.btn.btn-sm.btn-success(type='submit', ng-click='addWrongCount()')
+																| -
+														.col-md-2
+															button.btn.btn-sm.btn-success(type='submit', ng-click='addRightCount()')
+																| +
+														.col-md-2
+															button.btn.btn-sm.btn-success(type='submit', ng-click='addRightCount()')
+																| +
+														.col-md-2
+															button.btn.btn-sm.btn-success(type='submit', ng-click='addWrongCount()')
+																| -
+													.col-md-2
+													br
+													//
+														 END BUTTONS HERE 
+								.col-md-3
+									.panel.panel-danger
+										.panel-heading
+											.row
+												.col-xs-6
+													//
+																
+														<i class="fa fa-comments fa-5x">
+														</i>
+													img#stdAvatar.img-circle.img-responsive(src='../static/images/face-charles.png', alt='Avatar')
+												.col-xs-6.text-left
+													strong
+														| Charles
+													| Level 2
+													.progress.progress-striped
+														.progress-bar(style='width: 45%;')
+										a(href='#')
+											.panel-footer.announcement-bottom
+												.row
+													//
+														 BUTTONS COL 
+													#taskButtons.row
+														.col-md-1
+														.col-md-2
+															button.btn.btn-sm.btn-success(type='submit', ng-click='addWrongCount()')
+																| -
+														.col-md-2
+															button.btn.btn-sm.btn-success(type='submit', ng-click='addRightCount()')
+																| +
+														.col-md-2
+															button.btn.btn-sm.btn-success(type='submit', ng-click='addRightCount()')
+																| +
+														.col-md-2
+															button.btn.btn-sm.btn-success(type='submit', ng-click='addWrongCount()')
+																| -
+													.col-md-2
+													br
+													//
+														 END BUTTONS HERE 
+													//
+														 BUTTONS COL 
+													#taskButtons.row
+														.col-md-1
+														.col-md-2
+															button.btn.btn-sm.btn-success(type='submit', ng-click='addWrongCount()')
+																| -
+														.col-md-2
+															button.btn.btn-sm.btn-success(type='submit', ng-click='addRightCount()')
+																| +
+														.col-md-2
+															button.btn.btn-sm.btn-success(type='submit', ng-click='addRightCount()')
+																| +
+														.col-md-2
+															button.btn.btn-sm.btn-success(type='submit', ng-click='addWrongCount()')
+																| -
+													.col-md-2
+													br
+													//
+														 END BUTTONS HERE 
+							//
+								 /.row 
+						//
+							 TESTING ADDING IN MORE ROWS 
+						.row
+							.col-md-3
+								.panel.panel-info
+									.panel-heading
+										.row
+											.col-xs-6
+												//
+															
+													<i class="fa fa-comments fa-5x">
+													</i>
+												img#stdAvatar.img-circle.img-responsive(src='../static/images/face-charles.png', alt='Avatar')
+											.col-xs-6.text-left
+												strong
+													| Charles
+												| Level 2
+												.progress.progress-striped
+													.progress-bar(style='width: 45%;')
+									a(href='#')
+										.panel-footer.announcement-bottom
+											.row
+												//
+													 BUTTONS COL 
+												#taskButtons.row
+													.col-md-1
+													.col-md-2
+														button.btn.btn-sm.btn-success(type='submit', ng-click='addWrongCount()')
+															| -
+													.col-md-2
+														button.btn.btn-sm.btn-success(type='submit', ng-click='addRightCount()')
+															| +
+													.col-md-2
+														button.btn.btn-sm.btn-success(type='submit', ng-click='addRightCount()')
+															| +
+													.col-md-2
+														button.btn.btn-sm.btn-success(type='submit', ng-click='addWrongCount()')
+															| -
+												.col-md-2
+												br
+												//
+													 END BUTTONS HERE 
+												//
+													 BUTTONS COL 
+												#taskButtons.row
+													.col-md-1
+													.col-md-2
+														button.btn.btn-sm.btn-success(type='submit', ng-click='addWrongCount()')
+															| -
+													.col-md-2
+														button.btn.btn-sm.btn-success(type='submit', ng-click='addRightCount()')
+															| +
+													.col-md-2
+														button.btn.btn-sm.btn-success(type='submit', ng-click='addRightCount()')
+															| +
+													.col-md-2
+														button.btn.btn-sm.btn-success(type='submit', ng-click='addWrongCount()')
+															| -
+												.col-md-2
+												br
+												//
+													 END BUTTONS HERE 
+							.col-md-3
+								.panel.panel-info
+									.panel-heading
+										.row
+											.col-xs-6
+												//
+															
+													<i class="fa fa-comments fa-5x">
+													</i>
+												img#stdAvatar.img-circle.img-responsive(src='../static/images/face-samir.png', alt='Avatar')
+											.col-xs-6.text-left
+												strong
+													| Samir
+												| Level 2
+												.progress.progress-striped
+													.progress-bar(style='width: 45%;')
+									a(href='#')
+										.panel-footer.announcement-bottom
+											.row
+												//
+													 BUTTONS COL 
+												#taskButtons.row
+													.col-md-1
+													.col-md-2
+														button.btn.btn-sm.btn-success(type='submit', ng-click='addWrongCount()')
+															| -
+													.col-md-2
+														button.btn.btn-sm.btn-success(type='submit', ng-click='addRightCount()')
+															| +
+													.col-md-2
+														button.btn.btn-sm.btn-success(type='submit', ng-click='addRightCount()')
+															| +
+													.col-md-2
+														button.btn.btn-sm.btn-success(type='submit', ng-click='addWrongCount()')
+															| -
+												.col-md-2
+												br
+												//
+													 END BUTTONS HERE 
+												//
+													 BUTTONS COL 
+												#taskButtons.row
+													.col-md-1
+													.col-md-2
+														button.btn.btn-sm.btn-success(type='submit', ng-click='addWrongCount()')
+															| -
+													.col-md-2
+														button.btn.btn-sm.btn-success(type='submit', ng-click='addRightCount()')
+															| +
+													.col-md-2
+														button.btn.btn-sm.btn-success(type='submit', ng-click='addRightCount()')
+															| +
+													.col-md-2
+														button.btn.btn-sm.btn-success(type='submit', ng-click='addWrongCount()')
+															| -
+												.col-md-2
+												br
+												//
+													 END BUTTONS HERE 
+							.col-md-3
+								.panel.panel-success
+									.panel-heading
+										.row
+											.col-xs-6
+												//
+															
+													<i class="fa fa-comments fa-5x">
+													</i>
+												img#stdAvatar.img-circle.img-responsive(src='../static/images/student.png', alt='Avatar')
+											.col-xs-6.text-left
+												strong
+													| Student
+												| Level 2
+												.progress.progress-striped
+													.progress-bar(style='width: 45%;')
+									a(href='#')
+										.panel-footer.announcement-bottom
+											.row
+												//
+													 BUTTONS COL 
+												#taskButtons.row
+													.col-md-1
+													.col-md-2
+														button.btn.btn-sm.btn-success(type='submit', ng-click='addWrongCount()')
+															| -
+													.col-md-2
+														button.btn.btn-sm.btn-success(type='submit', ng-click='addRightCount()')
+															| +
+													.col-md-2
+														button.btn.btn-sm.btn-success(type='submit', ng-click='addRightCount()')
+															| +
+													.col-md-2
+														button.btn.btn-sm.btn-success(type='submit', ng-click='addWrongCount()')
+															| -
+												.col-md-2
+												br
+												//
+													 END BUTTONS HERE 
+												//
+													 BUTTONS COL 
+												#taskButtons.row
+													.col-md-1
+													.col-md-2
+														button.btn.btn-sm.btn-success(type='submit', ng-click='addWrongCount()')
+															| -
+													.col-md-2
+														button.btn.btn-sm.btn-success(type='submit', ng-click='addRightCount()')
+															| +
+													.col-md-2
+														button.btn.btn-sm.btn-success(type='submit', ng-click='addRightCount()')
+															| +
+													.col-md-2
+														button.btn.btn-sm.btn-success(type='submit', ng-click='addWrongCount()')
+															| -
+												.col-md-2
+												br
+												//
+													 END BUTTONS HERE 
+							.col-md-3
+								.panel.panel-danger
+									.panel-heading
+										.row
+											.col-xs-6
+												//
+															
+													<i class="fa fa-comments fa-5x">
+													</i>
+												img#stdAvatar.img-circle.img-responsive(src='../static/images/gamification.png', alt='Avatar')
+											.col-xs-6.text-left
+												strong
+													| Charles
+												| Level 2
+												.progress.progress-striped
+													.progress-bar(style='width: 45%;')
+									a(href='#')
+										.panel-footer.announcement-bottom
+											.row
+												//
+													 BUTTONS COL 
+												#taskButtons.row
+													.col-md-1
+													.col-md-2
+														button.btn.btn-sm.btn-success(type='submit', ng-click='addWrongCount()')
+															| -
+													.col-md-2
+														button.btn.btn-sm.btn-success(type='submit', ng-click='addRightCount()')
+															| +
+													.col-md-2
+														button.btn.btn-sm.btn-success(type='submit', ng-click='addRightCount()')
+															| +
+													.col-md-2
+														button.btn.btn-sm.btn-success(type='submit', ng-click='addWrongCount()')
+															| -
+												.col-md-2
+												br
+												//
+													 END BUTTONS HERE 
+												//
+													 BUTTONS COL 
+												#taskButtons.row
+													.col-md-1
+													.col-md-2
+														button.btn.btn-sm.btn-success(type='submit', ng-click='addWrongCount()')
+															| -
+													.col-md-2
+														button.btn.btn-sm.btn-success(type='submit', ng-click='addRightCount()')
+															| +
+													.col-md-2
+														button.btn.btn-sm.btn-success(type='submit', ng-click='addRightCount()')
+															| +
+													.col-md-2
+														button.btn.btn-sm.btn-success(type='submit', ng-click='addWrongCount()')
+															| -
+												.col-md-2
+												br
+												//
+													 END BUTTONS HERE 
+						//
+							 /.row 
+			//
+				 CHARTS PORTION 
+			section#charts
+				.jumbotron
+					.row
+						.col-lg-4
+							.panel.panel-primary
+								.panel-heading
+									h3.panel-title
+										i.fa.fa-long-arrow-right
+										| Donut Graph Students
+								.panel-body
+									.panel-body
+										#donut-example
+									.text-right
+										a(href='#')
+											| View Details
+											i.fa.fa-arrow-circle-right
+						.col-lg-8
+							.panel.panel-primary
+								.panel-heading
+									h3.panel-title
+										i.fa.fa-long-arrow-right
+										| Bar Graph Students
+								.panel-body
+									#bar-example
+									.text-right
+										a(href='#')
+											| View Details
+											i.fa.fa-arrow-circle-right
+					//
+						 /.row 
+			//
+				 // *************************************************
+				//END OF CLASSROOM MODULE FOR DARYL   
+			section#notifications
+				.row
+					.col-md-3
+						.panel.panel-info
+							.panel-heading
+								.row
+									.col-xs-6
+										i.fa.fa-comments.fa-5x
+									.col-xs-6.text-right
+										p.announcement-heading
+											| 456
+										p.announcement-text
+											| New Mentions!
+							a(href='#')
+								.panel-footer.announcement-bottom
+									.row
+										.col-xs-6
+											| View Mentions
+										.col-xs-6.text-right
+											i.fa.fa-arrow-circle-right
+					.col-md-3
+						.panel.panel-warning
+							.panel-heading
+								.row
+									.col-xs-6
+										i.fa.fa-check.fa-5x
+									.col-xs-6.text-right
+										p.announcement-heading
+											| 12
+										p.announcement-text
+											| To-Do Items
+							a(href='#')
+								.panel-footer.announcement-bottom
+									.row
+										.col-xs-6
+											| Complete Tasks
+										.col-xs-6.text-right
+											i.fa.fa-arrow-circle-right
+			section#graphs
+				.row
+					.col-lg-12
+						.panel.panel-primary
+							.panel-heading
+								h3.panel-title
+									i.fa.fa-bar-chart-o
+									| Class Statistics: October 1, 2013 - October 31, 2013
+							.panel-body
+								#morris-chart-area
+				//
+					 /.row 
+				//
+					 JUMBOTRON
+			//
+				 SECTION FOR STUDENT INFO BOXES 
+			section#services
+				.outer_container
+					.container
+						.row
+							.col.col-md-5.col-sm-12.col-xs-12
+								h1
+									| Student Info
+							.container
+								.row
+									.center-form.panel
+										.panel-body
+											form(method='post', name='loginForm')
+												.well
+													strong
+														| Student Info
+													div(ng-app='ng-app', ng-controller='StudentController')
+														input(name='student-description', ng-model='studentDescription', ng-placeholder='Descrition Here')
+														p
+															| Your Name
+															span(style='color: red;')
+																| {{studentDescription}}
+															| !
+														br
+														button.btn.btn-sm.btn-success(type='submit', ng-click='addRightCount()')
+															| Add Right Answer
+														br
+														button.btn.btn-sm.btn-success(type='submit', ng-click='addWrongCount()')
+															| Add Wrong Answer
+														br
+														p
+															| Input right answers:
+														input(name='right-number', ng-model='rightNumber', ng-placeholder='How many numbers did this person get right')
+														br
+														p
+															| Input wrong answers:
+														input(name='name', wrong-number='wrong-number', ng-model='wrongNumber', ng-placeholder='How many numbers did this person get right')
+														br
+														br
+														.btn.btn-default
+															| Right Answers: {{rightNumber}}
+														.btn.btn-default
+															| Wrong Answers {{wrongNumber}}
+														br
+														hr
+												button.btn.btn-lg.btn-block.btn-success(type='submit')
+													| Add Student
+			section#team
+				.outer_container
+					.container
+						.paddinglr10
+							h1
+								| Agenda
+							form(ng-submit='addItem()')
+								fieldset
+									//
+											 
+										<input type="text" placeholder="Add something.." size=50 ng-model="state.newItem" />
+										<button class="btn btn-primary">
+										Add Item
+										</button>
+									br
+									hr
+							button.btn(ng-click='setAndRetrieveLastNItems(5)')
+								| Retrieve last 5 items
+							button.btn(ng-click='setAndRetrieveLastNItems(10)')
+								| Retrieve last 10 items
+							button.btn(ng-click='setAndRetrieveLastNItems(15)')
+								| Retrieve last 15 items
+							button.btn(ng-click='addGoal()')
+								| Add a goal
+							button.btn(ng-click='resetGoals()')
+								| Reset goals
+							.well(ng-model='goals')
+								strong
+									| Tasks Here:
+								input(type='text', placeholder='Add a task here..', size='50', ng-model='newgoal')
+								button.btn.btn-primary(ng-click='addGoal(newgoal)')
+									| Add Tasks
+								br
+								//
+									 {{goals}} 
+								//
+											 
+									<ul ng-repeat="goal in goals">
+									<li ng-model="goal">
+									{{goal}} 
+									</li>
+									</ul>
+							table.table
+								thead
+									th
+										| Number
+									th
+										| Text
+								tbody
+									tr(ng-repeat='goal in goals', ng-model='goals')
+										td
+											input#demo_box_2.css-checkbox(type='checkbox', ng-model='targetGoal', ng-click='finishGoal(goal)')
+											label.css-label(for='demo_box_2', name='demo_lbl_2')
+												| {{goal.title}}
+										td
+											input#demo_box_1.css-checkbox(type='checkbox', ng-model='targetGoal', ng-click='inProgress(goal)')
+											label.css-label(for='demo_box_1', name='demo_lbl_1')
+												| {{goal.done}}
+			section#about
+				.outer_container(style:='style:')
+					.container
+						.row
+							.col.col-md-5.col-sm-12
+								h1
+									| Class Test
+							#about_content.col.col-md-7.col-sm-12.center-row
+								.row.center
+									.col.col-md-4.col-sm-12.templatemo_ceo
+										img.center-block.img-circle.img-responsive(src='../static/images/face-samir.png', alt='Linda')
+										p
+											| Samir, CTO
+									.col.col-md-8.col-sm-12
+										p
+											| asdasdas
+											a(href='#')
+												| asdasdas
+											| based on Boasdasdasdasdaste.
+										p
+											| Vestibulum ac enim.Vestibulum at mollis justo, eu elementum nisi. Sed consequat odio eget nunc tristique venenatis. Nullam non eros molestie, tristique libero ut, lacinia diam.
+										p
+											| Integer hendrerit nibh at aliquam tincidunt. Duis auctor congue arcu eget congue. Vestibulum tristique sollicitudin est, non porttitor est viverra quis.
+			//
+				 TESTING SECTION 
+			section#testing
+				.container.well(ng-app='TodoApp', ng-controller='StudentController')
+					| Test
+					.btn.btn-default(ng-click='test()')
+						| Test
+			//
+				 TESTING SECTION 
+			//
+				 JAVA SCRIPT 
+			script(src='../static/js/graphs.js')
+							
+			script(src='http://cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js')
+							
+			script(src='http://code.jquery.com/jquery-1.8.2.min.js')
+							
+			script(src='http://cdn.oesmith.co.uk/morris-0.4.1.min.js')
+							
+			//
+				 CONTROLLERS 

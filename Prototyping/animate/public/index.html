@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Animate</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+
+
+	<!-- JS -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js">
+    </script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js">
+    </script>
+    <link href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet">
+    <script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+    <link href="/static/styles.css" rel="stylesheet">
+
+
+	<script src="/javascripts/controller.js"></script>
+	<script src="/javascripts/services.js"></script>
+	<script src="/javascripts/appRoutes.js"></script>
+	<script src="/	javascripts/app.js"></script>
+</head>
+
+  </head>
+  <body>
+    <h1>Animate</h1>
+    <p>We did lolit!</p>
+
+
+  <div id="wrapper" class="wrapper" data-asm-wrapper>
+    <section id="buttons">
+      <div data-asm-control="slideLeft">Slide Left</div>
+      <div data-asm-control="slideRight">Slide Right</div>
+      <div data-asm-control="slideTop">Slide Top</div>
+      <div data-asm-control="slideBottom">Slide Bottom</div>
+      <div data-asm-control="pushLeft">Push Left</div>
+      <div data-asm-control="pushRight">Push Right</div>
+      <div data-asm-control="pushTop">Push Top</div>
+      <div data-asm-control="pushBottom">Push Bottom</div>
+    </section>
+  </div>
+
+  <nav data-asm-slide-left>
+    <ul>
+      <li>Apples</li>
+      <li>Pears</li>
+      <li>Oranges</li>
+      <li>Pears</li>
+    </ul>
+  </nav>
+  <nav data-asm-slide-right>
+    <ul>
+      <li>Apples</li>
+      <li>Pears</li>
+      <li>Oranges</li>
+      <li>Pears</li>
+    </ul>
+  </nav>
+  <nav data-asm-slide-top>
+    <ul>
+      <li>Apples</li>
+      <li>Pears</li>
+      <li>Oranges</li>
+      <li>Pears</li>
+    </ul>
+  </nav>
+  <nav data-asm-slide-bottom>
+    <ul>
+      <li>Apples</li>
+      <li>Pears</li>
+      <li>Oranges</li>
+      <li>Pears</li>
+    </ul>
+  </nav>
+  <nav data-asm-push-left>
+    <ul>
+      <li>Apples</li>
+      <li>Pears</li>
+      <li>Oranges</li>
+      <li>Pears</li>
+    </ul>
+  </nav>
+  <nav data-asm-push-right>
+    <ul>
+      <li>Apples</li>
+      <li>Pears</li>
+      <li>Oranges</li>
+      <li>Pears</li>
+    </ul>
+  </nav>
+  <nav data-asm-push-top>
+    <ul>
+      <li>Apples</li>
+      <li>Pears</li>
+      <li>Oranges</li>
+      <li>Pears</li>
+    </ul>
+  </nav>
+  <nav data-asm-push-bottom>
+    <ul>
+      <li>Apples</li>
+      <li>Pears</li>
+      <li>Oranges</li>
+      <li>Pears</li>
+    </ul>
+  </nav>
+
+    <div ng-view></div>
+
+
+  </body>
+</html>

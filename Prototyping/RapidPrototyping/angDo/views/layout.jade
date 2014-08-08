@@ -1,0 +1,23 @@
+doctype html
+html(ng-app='MainApp')
+	head
+		meta(charset='utf-8')
+		meta(name='viewport', content='width=device-width, initial-scale=1')
+
+		title Node/Angular Todo App
+		
+		link(rel='stylesheet', href='/stylesheets/style.css')
+		link(rel='stylesheet', href='//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css')
+
+		script(src='//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js')
+		script(src='//ajax.googleapis.com/ajax/libs/angularjs/1.0.8/angular.min.js')
+		script(src='/core.js')  
+
+		style
+			html      					{ overflow-y:scroll; }
+			body      					{ padding-top:50px; }
+			#todo-list				{ margin-bottom:30px; }
+
+
+	body
+		block content
