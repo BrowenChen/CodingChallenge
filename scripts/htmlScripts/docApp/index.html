@@ -1,0 +1,35 @@
+<Doctype html>
+<head>
+	<title>
+		
+	</title>
+</head>
+<body>
+	<p> Here</p>
+	<button onclick="listFunct()"> click it </button>
+
+	<h3> Links Here </h3>
+	<p id="view"> </p> 
+
+	<p id="second"> </p> 
+
+	<p id="third"> </p> 
+	<script> 
+	function listFunct() {
+
+		//Get the path of the file
+		var x = location.pathname;
+		document.getElementById("view").innerHTML = x;
+
+		//Get the filename
+		var filename = window.location.pathname.substr(window.location.pathname.lastIndexOf("/") + 1);
+		document.getElementById("second").innerHTML = filename;
+
+		//Get the Directory Path
+		var dirName= window.location.pathname;
+		var newString = dirName.substring(0,dirName.length-10);
+		document.getElementById("third").innerHTML = newString;
+
+	}
+	</script>
+</body>
