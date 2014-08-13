@@ -13,17 +13,10 @@ app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///pin.db'
 db = SQLAlchemy(app)
 
 
-
-
-
-
-
-
-
 #FileScript ==================
 
-
 outputList = []
+outputNames = []
 path= os.path.abspath(__file__)  # insert the path to the directory of interest
 
 #Get and filter out all the html files in the current directory
@@ -33,6 +26,9 @@ dirList=os.listdir(path[:-12])
 for fname in dirList:
     name = fname
     if (name[-5:] == ".html"):
+
+		outputNames.append(name)
+
 		outputList.append(path[:-12]+name)
 
 
@@ -40,16 +36,6 @@ print(outputList)
 
 
 #FILE SCRIPT ==================
-
-
-
-
-
-
-
-
-
-
 
 
 class Pin(db.Model):
@@ -73,20 +59,28 @@ def index():
     return app.send_static_file("index.html")
 
 
-@app.route('/docs')
+@app.route('/docs/')
 def docs():
 	outPutString = ""
 	htmlList= [] 
 
-	for file in outputList:
+	for file in outputNames:
 
 		#Formatted for html
-		outPutString = outPutString + "<a href='/'>" +  file + "</a> <br>"
+		outPutString = outPutString + "<a href='/docs/" + file+ "'>" +  file + "</a> <br>"
 		htmlList.append(file)
 
 	print(outPutString)
 	print(htmlList)
-	return 	"<h2> Docs from current directory</h2> <br>" + outPutString + " <br> <h3> Listed Here </h3>"
+	return 	"<h2> Docs from current directory</h2> <br>" + outPutString + " <br> <h3> Listed Up There </h3>"
+
+@app.route('/docs/<string:id>')
+def docId(id):
+	print("printing id")
+	print(id)
+	return app.send_static_file(id)
+
+
 
 
 if __name__ == '__main__':

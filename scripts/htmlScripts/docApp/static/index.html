@@ -1,31 +1,35 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>Pin Clone</title>
-    <script src="bower_components/angular/angular.js" type="text/javascript"></script>
-    <link rel="stylesheet" href="css/styles.css" />
-  </head>
+<Doctype html>
+<head>
+	<title>
+		
+	</title>
+</head>
+<body>
+	<p> Here</p>
+	<button onclick="listFunct()"> click it </button>
 
+	<h3> Links Here </h3>
+	<p id="view"> </p> 
 
-  <body ng-app="app" ng-controller="AppCtrl as app">
+	<p id="second"> </p> 
 
-    <div class="container well" ng-controller="taskCtrl as task">
-      {{title}}
-      asdas
-    </div>    
+	<p id="third"> </p> 
+	<script> 
+	function listFunct() {
 
-    
-    <button ng-click="app.addPin()">Add Pin</button> 
-    <br />
-    <div class="pin" ng-repeat="pin in app.pins">
-        <img ng-src="{{ pin.image }}" alt="" />
-        <div class="ui">
-            <input type="text" ng-model="pin.title"/>
-            <button ng-click="app.updatePin(pin)">Update</button>
-            <button ng-click="app.deletePin(pin)">Delete</button>
-        <div>
-    </div>
+		//Get the path of the file
+		var x = location.pathname;
+		document.getElementById("view").innerHTML = x;
 
-    <script src="js/app.js" type="text/javascript"></script>
-  </body>
-</html>
+		//Get the filename
+		var filename = window.location.pathname.substr(window.location.pathname.lastIndexOf("/") + 1);
+		document.getElementById("second").innerHTML = filename;
+
+		//Get the Directory Path
+		var dirName= window.location.pathname;
+		var newString = dirName.substring(0,dirName.length-10);
+		document.getElementById("third").innerHTML = newString;
+
+	}
+	</script>
+</body>
