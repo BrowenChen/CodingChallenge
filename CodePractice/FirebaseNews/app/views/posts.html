@@ -1,4 +1,30 @@
-<form ng-submit="submitPost()">
+<h1>
+Links Here
+</h1>
+
+<!-- <div ng-repeat="post in posts">
+	<a href="{{post.url}}"> {{post.title}}   </a>
+	<a ng-submit="deletePost($index)"> Delete </a>
+</div>
+ -->
+
+<div ng-repeat="(postId, post) in posts">
+	<a href="{{post.url}}"> {{post.title}}   </a>
+	<a ng-click="fireDelete(postId)"> Delete </a>
+</div>
+
+
+<!-- <form ng-submit="submitPost()">
+
+	<input type="text" ng-model="post.title">
+	<input type="text" ng-model="post.url">
+
+	<input type="submit" value="Add Post">
+
+</form> -->
+
+
+<form ng-submit="firePost()">
 
 	<input type="text" ng-model="post.title">
 	<input type="text" ng-model="post.url">
@@ -7,7 +33,7 @@
 
 </form>
 
-Titles:
+<!-- Titles:
 <div ng-repeat="single in posts">
 	{{single.title}}
 </div>
@@ -18,5 +44,5 @@ Urls:
 <div ng-repeat="single in posts">
 {{single.url}}
 </div>
-<br>
+<br> -->
 
