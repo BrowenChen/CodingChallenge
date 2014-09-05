@@ -33,17 +33,17 @@ angular
   });
 
 
-
+//Adding firebase into angular. Service Person
   angular
   .module('angularfirebaseApp', [
-
-
   'firebase'
-
-  
   ])
+
+  //Setting the value of the URL to whatever
   .value('fbURL', 'https://angularifictest.firebaseio.com/')
   .factory('Person', function (fbURL, $firebase) {
     return $firebase(new Firebase(fbURL));
   })
+
+
 

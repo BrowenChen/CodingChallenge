@@ -17,8 +17,10 @@ angular.module('angularFireApp')
   });
 
 
+//Firebase controller
   angular.module('angularfirebaseApp')
   .controller('MainCtrl', function ($scope, Person) {
+	$scope.person = Person;
     $scope.add = function() {
      var save = Person.$add({
       firstName: $scope.firstName,
