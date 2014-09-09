@@ -70,8 +70,65 @@ def revString(word):
 
 
 
+# Q3) Determine if one string is a permutation of another string
+
+# A) Lenght of strings, what if one string is a subset of another string?
+# D)
+# P)
+# w)
+# T)
+
+# 1) Examplify
+# 2) Base Case and Expand
+# 3) Generalize
+# 4) Pattern Matching
+# 5) Simplify and match
+
+# How we can solve this problem: Hash table, go through all the letters of first string inserting 1 for each letter. Go through the second string
+# and remove one from each hash. If all of the letters in the first hash of the second string is 0, then yes permutation
+
+# Q4)
+
+def permute(str1, str2):
+	hash = {}
+
+	for l in str1:
+		if l not in hash:
+			hash[l] = 1
+		elif l in hash:
+			hash[l]+= 1
+
+
+	for w in str2:
+		hash[w] -= 1
+
+	# if all of the letters in str2 is 0 in the hash, then yes its a permutation
+	print hash
+	return 1
+
+
+## Q5) Remove all spaces with %20 in a given string
+
+# A) is there enough space at the end allocated for memory? Can we use additional data structures? 
+# D) -
+# P) Iterate once, mark all the spaces' indexs. Create a new array and reinsert. Everytime we hit an index that has a space, 
+# add in %20 and subtract current index of original string by 2 because we added two additional things
+# W) - 
+# T) - 
+
+def remSpace(word):
+	marked = []
+	newWord = ''
+	curMarked = 0
+	curIndex = 0
+
+	for x in range(len(word)):
+		if word[x] == ' ':
+			marked.append(x)
 
 
 
 
+	
+	
 
