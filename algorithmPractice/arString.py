@@ -127,6 +127,23 @@ def remSpace(word):
 			marked.append(x)
 
 
+	# Now that we got the indices of the spaces, while curIndex < len(word), we add in the original sentence
+	# Everytime we hit an index, we add %20 and dont update the curIndex 
+
+
+
+## Q6) Image represented by NxN matrix with each pixel 4 bytes. Method to rotate image by 90 degrees
+
+# We will be shifting the index of the current column to the row. For example, (2, 3), where  2 is the x column will be switched
+# to (3, 2)
+
+
+# Matrix is list of tuples representing coordinates
+
+def rotateImg(matrix):
+
+
+
 
 
 	
