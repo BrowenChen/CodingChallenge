@@ -140,7 +140,67 @@ def remSpace(word):
 
 # Matrix is list of tuples representing coordinates
 
-def rotateImg(matrix):
+# def rotateImg(matrix):
+
+
+
+# Q7) Compression that counts repeated characters
+
+# A) Numbers, Characters, 
+# D) Last Character, curCount, Keep track in a list [a,3,b,3,...]
+# P)
+# W)
+# T) Base cases is if no repeated characters. If there's only one character, how does it end
+
+# How do you deal with the first number
+
+def compression(word):
+	lastChar = ''
+	curCount = 1
+	trackList = []
+
+	newString = ''
+	# Iterate to count the occurences the first time
+	for x in range(len(word)):
+		if word[x] != lastChar:
+			if x != 0:
+				trackList.append(lastChar)
+				trackList.append(curCount)
+
+			lastChar = word[x]
+			curCount = 1
+
+
+
+		elif word[x] == lastChar:
+			curCount += 1
+
+
+
+
+	# Function to get the last set
+	trackList.append(lastChar)
+	trackList.append(curCount)
+
+
+
+	# Now we want to create a new string
+	for x in range(len(trackList)):
+		print trackList[x]
+		# newString += trackList[x]
+
+	# return newString
+
+
+
+
+
+
+
+
+
+
+
 
 
 
