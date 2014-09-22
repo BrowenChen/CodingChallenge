@@ -114,8 +114,7 @@ int main(int argc, char **argv) {
  * @param e: the encryption key from the key_file passed in through the command-line arguments
  * @param n: the modulus for RSA from the modulus_file passed in through the command-line arguments
  *
- * Fill in the method using the repeated squares method of calculating RSA. Store the result in the provided result argument.
- * See spec for more implementation details.
+
  */
 static void
 perform_rsa(mpz_t result, mpz_t message, mpz_t d, mpz_t n)
