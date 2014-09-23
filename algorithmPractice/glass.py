@@ -146,6 +146,8 @@ def repeated_squaring(message, decrypt, modulo):
 # 2) Height + 1 meter
 
 
+# TEST EDGE CASES
+
 
 def findGrowth():
     numTests = input()
@@ -173,4 +175,86 @@ def findGrowth():
     
 # findGrowth()
 
+
+
+
+# A subsequence of a sequence is a sequence which is obtained by deleting zero or more elements from the sequence.
+# You are given a sequence A in which every element is a pair of integers i.e A = [(a , w ), (a , w ),..., (a , w )].
+# For a subseqence B = [(b , v ), (b , v ), ...., (b , v )] of the given sequence :
+# We call it increasing if for every i (1 <= i < M ) , b < b .
+# Weight(B) = v + v + ... + v .
+# Task:
+# Given a sequence, output the maximum weight formed by an increasing subsequence.
+# Input:
+# The first line of input contains a single integer T. T test-cases follow. The first line of each test-case contains an integer N. The
+# next line contains a , a ,... , a separated by a single space. The next line contains w , w , ..., w separated by a single space.
+# Output:
+# For each test-case output a single integer: The maximum weight of increasing subsequences of the given sequence.
+# Constraints:
+# 1 <= T <= 5
+# 1 <= N <= 150000
+# 1 <= a <= 10 , where i ∈ [1..N]
+# 1 <= w <= 10 , where i ∈ [1..N]
+
+
 		
+
+
+# A) Delete from the array if not increasing
+#	Naive algorithm starts at every number and finds increasing lists
+ 	# Longest increasing 
+ 	# Edge Cases: Max sum requires less than max decreasing list?
+
+#	Start from every number, find all greater numbers at that point. Recursively
+#		all(num) + all(num[2])
+
+# D)	Simplify: find all increasing subsequences, add all weight values and take the maximum
+
+
+
+#	For numbers in list, keep track of the highest. Start at that number. 
+
+
+# P)
+#  iterate backwards, find the highest at number i
+#   def highest()
+#	for i in list
+
+#		if len(list) == 0 || 1:
+#			return list[i][1] The value of that number
+
+#		list[i][1] Get the value of that number
+#		if list[i] > list[i-1]:
+#			return max(list[i][1] + highest[list[:i-1]])
+
+#		elif list[i] <= list[i-1]:
+#			return max(list[i][1] + highest[list[:i-2]])
+
+
+# # W)
+# # T)	
+
+
+
+
+
+# def seqWeight():
+#	cycles = input()
+
+
+# Increasing Subsequences problem
+# def nincr_seq_ivlad(seq):
+#     dp = [1]*len(seq)
+#     for i, ei in enumerate(seq):
+#         for j in xrange(i):
+#             if seq[j] < ei:
+#                 dp[i] += dp[j]
+#     return sum(dp)
+
+# print nincr_seq_ivlad(range(10)), 2**10-1
+# print nincr_seq_ivlad(range(20)), 2**20-1
+# print nincr_seq_ivlad(range(9, -1, -1)), 10
+# print nincr_seq_ivlad(range(19, -1, -1)), 20
+# print nincr_seq_ivlad([1]*9), 9
+# print nincr_seq_ivlad([-1]*19), 19
+
