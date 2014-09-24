@@ -108,6 +108,29 @@ class Graph:
 
 
 
+# SUBSEQUENCE WEIGHTING
+# A subsequence of a sequence is a sequence which is obtained by deleting zero or more elements from the sequence.
+# You are given a sequence A in which every element is a pair of integers i.e A = [(a , w ), (a , w ),..., (a , w )].
+# For a subseqence B = [(b , v ), (b , v ), ...., (b , v )] of the given sequence :
+# We call it increasing if for every i (1 <= i < M ) , b < b .
+# Weight(B) = v + v + ... + v .
+# Task:
+# Given a sequence, output the maximum weight formed by an increasing subsequence.
+
+# Sort the input in O(nlogn) by increasing x values
+# Find the max weight in the sorted array
+
+def sortingAlg(arr):
+	#Sort the array
+	
+
+def subweighting(sortedArr):
+	if len(sortedArr) == 1:
+		return sortedArr[0][1]
+	else:
+		return max(sortedArr[len(sortedArr) - 1] + subweighting[sortedArr[:-1]], subweighting[sortedArr[:-1]])
+
+
 
 
 
