@@ -86,6 +86,27 @@ print anagrams("one sentence","a different sentence")
 
 
 
+# Dijkstra's shortest path algorithm
+
+# Similar to BFS. Start at a node and iterates through all the nodes to find the shortest path.  
+
+# Graph class that can add nodes and edges with info for distances
+class Graph:
+	def __init__(self):
+		self.nodes = set()
+		self.edges = defaultdict(list)
+		self.distances = {}
+
+
+	def add_node(self, value):
+		self.nodes.add(value)
+
+	def add_edge(self, from, to, distance):
+		self.edges[from].append(to)
+		self.edges[to].append(from)
+		self.distances[(from, to)] = distance
+
+
 
 
 
