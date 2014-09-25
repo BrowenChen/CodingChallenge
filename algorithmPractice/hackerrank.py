@@ -1,3 +1,43 @@
+import math
+# Summing the N Series
+# You are given a series, whose n term is defined as
+# T = n^2 - (n-1)^2
+# You have to find the Sum of the series S = T + T + T + .... + T
+# Find S % (10^9 + 7)
+
+
+# A - Final return value is summation Mod ----
+	 # T is max 10, n is max 10^6. Tn = n^2 - (n-1) ^2
+# D - Loop until n, Find T at each n, add to overall sum. Divide overall sum by ----
+# P
+# W
+# T
+
+# Examplify
+# Pattern Matching
+# Base Case and Build
+# Simplify and Generalize
+# List Data Structures
+
+def sumSeries(n):
+	finalSum = 0
+
+	for i in range(n):
+		num = i + 1
+		t = math.pow(num,2) - math.pow((num-1),2)
+
+		finalSum += t
+
+	return finalSum % (math.pow(10,9) + 7)
+
+
+# RESULTS - note that T is a telescopic series. Also T simplifies to 2n-1. 
+
+
+
+
+
+
 # # Check if two strings are anagrams?
 # Numbers Letters, Punct
 # Case sensitive
@@ -76,12 +116,12 @@ def anagrams(string1, string2):
 # TEST CASES
 
 
-print " TESTING "
-print anagrams("the eyes","they see")
-print anagrams("the eyes","they see!")
-print anagrams("the eyes","they do see")
-print anagrams("SCHOOL MASTER","THE CLASSROOM")
-print anagrams("one sentence","a different sentence")
+# print " TESTING "
+# print anagrams("the eyes","they see")
+# print anagrams("the eyes","they see!")
+# print anagrams("the eyes","they do see")
+# print anagrams("SCHOOL MASTER","THE CLASSROOM")
+# print anagrams("one sentence","a different sentence")
 
 
 
@@ -91,20 +131,20 @@ print anagrams("one sentence","a different sentence")
 # Similar to BFS. Start at a node and iterates through all the nodes to find the shortest path.  
 
 # Graph class that can add nodes and edges with info for distances
-class Graph:
-	def __init__(self):
-		self.nodes = set()
-		self.edges = defaultdict(list)
-		self.distances = {}
+# class Graph:
+#	def __init__(self):
+#		self.nodes = set()
+#		self.edges = defaultdict(list)
+#		self.distances = {}
 
 
-	def add_node(self, value):
-		self.nodes.add(value)
+#	def add_node(self, value):
+#		self.nodes.add(value)
 
-	def add_edge(self, from, to, distance):
-		self.edges[from].append(to)
-		self.edges[to].append(from)
-		self.distances[(from, to)] = distance
+#	def add_edge(self, from, to, distance):
+#		self.edges[from].append(to)
+#		self.edges[to].append(from)
+#		self.distances[(from, to)] = distance
 
 
 
