@@ -1,4 +1,5 @@
 import math
+import heapq
 # Summing the N Series
 # You are given a series, whose n term is defined as
 # T = n^2 - (n-1)^2
@@ -159,6 +160,35 @@ class Graph:
 # ng.add_node("a")
 # ng.add_node("b")
 # ng.add_edge("a", "b", 3)
+
+
+# Priority Queue implementation with heappq python module
+class PriorityQueue():
+	def __init__(self):
+		self._queue = []
+		self._index = 0
+
+	def push(self, item, priority):
+		heapq.heappush(self._queue, (-priority, self._index, item))
+		self._index += 1
+
+	def pop(self):
+		return heapq.heappop(self._queue)[-1]
+
+
+
+
+# DIJKSTRA (G, w, s)
+
+# INITIALIZE SINGLE-SOURCE (G, s)
+# S  { }     // S will ultimately contains vertices of final shortest-path weights from s
+# Initialize priority queue Q i.e., Q    V[G]
+# while priority queue Q  is not empty do
+#     u    EXTRACT_MIN(Q)    // Pull out new vertex
+#     S    S in {u}
+#     // Perform relaxation for each vertex v adjacent to u
+#     for each vertex v in Adj[u] do
+#         Relax (u, v, w)
 
 
 # SUBSEQUENCE WEIGHTING
