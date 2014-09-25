@@ -124,28 +124,41 @@ def anagrams(string1, string2):
 # print anagrams("one sentence","a different sentence")
 
 
-
-
 # Dijkstra's shortest path algorithm
 
 # Similar to BFS. Start at a node and iterates through all the nodes to find the shortest path.  
 
 # Graph class that can add nodes and edges with info for distances
-# class Graph:
-#	def __init__(self):
-#		self.nodes = set()
-#		self.edges = defaultdict(list)
-#		self.distances = {}
+class Graph:
+	def __init__(self):
+		self.nodes = set()
+		self.edges = {}
+		self.distances = {}
 
 
-#	def add_node(self, value):
-#		self.nodes.add(value)
+	def add_node(self, value):
+		self.nodes.add(value)
+		self.edges[value] = []
 
-#	def add_edge(self, from, to, distance):
-#		self.edges[from].append(to)
-#		self.edges[to].append(from)
-#		self.distances[(from, to)] = distance
+	def add_edge(self,from_n,to_n,distance):
+		self.edges[from_n].append(to_n)
+		self.edges[to_n].append(from_n)
+		self.distances[(from_n, to_n)] = distance
 
+	def show_nodes(self):
+		print self.nodes
+
+	def show_edges(self):
+		print self.edges
+
+	def show_distances(self):
+		print self.distances
+
+# TESTING
+# ng = Graph()
+# ng.add_node("a")
+# ng.add_node("b")
+# ng.add_edge("a", "b", 3)
 
 
 # SUBSEQUENCE WEIGHTING
