@@ -143,8 +143,13 @@ class Graph:
 
 	def add_edge(self,from_n,to_n,distance):
 		self.edges[from_n].append(to_n)
-		self.edges[to_n].append(from_n)
+		# self.edges[to_n].append(from_n)
 		self.distances[(from_n, to_n)] = distance
+
+	# def make_graph(self):
+
+
+
 
 	def show_nodes(self):
 		print self.nodes
@@ -175,21 +180,53 @@ class PriorityQueue():
 	def pop(self):
 		return heapq.heappop(self._queue)[-1]
 
-
-
+	def length(self):
+		return len(self._queue)
 
 # DIJKSTRA (G, w, s)
 
-# INITIALIZE SINGLE-SOURCE (G, s)
-# S  { }     // S will ultimately contains vertices of final shortest-path weights from s
-# Initialize priority queue Q i.e., Q    V[G]
-# while priority queue Q  is not empty do
-#     u    EXTRACT_MIN(Q)    // Pull out new vertex
-#     S    S in {u}
-#     // Perform relaxation for each vertex v adjacent to u
-#     for each vertex v in Adj[u] do
-#         Relax (u, v, w)
 
+
+def dijkstras(graph, end, source):
+	finalPath = []
+	pq = PriorityQueue()
+	visited = []
+	dist = {}
+	prev = {}
+
+
+	dist[source] = 0
+
+
+	for vert in graph:
+		if vert != source: 
+			dist[vert] = float("inf")
+			prev[vert] = None
+
+	while (pq.length != 0):
+		u = pq.pop()
+
+# TEST GRAPH
+# tg = Graph()
+# tg.add_node("a")
+# tg.add_node("b")
+# tg.add_node("c")
+
+# tg.add_edge("a", "b", 1)
+# tg.add_edge("a", "c", 3)
+
+# tg.add_edge("b", "a", 1)
+# tg.add_edge("b", "c", 1)
+
+# tg.add_edge("c", "a", 3)
+# tg.add_edge("c", "b", 1)
+
+# print(tg.show_edges())
+
+test_graph = {'A':{'B':1,'C':3},
+              'B':{'A':1,'C':1},
+              'C':{'A':3,'B':1},
+             }
 
 # SUBSEQUENCE WEIGHTING
 # A subsequence of a sequence is a sequence which is obtained by deleting zero or more elements from the sequence.
