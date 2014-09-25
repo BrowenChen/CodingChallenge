@@ -31,7 +31,7 @@ def sumSeries(n):
 	return finalSum % (math.pow(10,9) + 7)
 
 
-# RESULTS - note that T is a telescopic series. Also T simplifies to 2n-1. 
+# RESULTS - note that T is a telescopic series. Also T simplifies to 2n-1. One line solution : for cas in xrange(input()): print pow(input(), 2, 10**9+7)
 
 
 
