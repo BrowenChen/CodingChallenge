@@ -1,3 +1,49 @@
+import math
+# Write a method that returns all subsets of a set (Power set)
+# Let first = S[0] Let smallerSet = S[1, , n]
+# Compute all subsets of smallerSet and put them in allsubsets
+# For each subset in allsubsets, clone it and add first to the subset
+
+
+# (1,2,3) - > (), (1), (2), (1,2), (3), (1,3), (2,3), (1,2,3) 
+
+# Start with empty set. For each value in the array, add to all the subsets in allSubsets. 
+
+
+
+def power(theSet):
+	allSubsets = [[]] #initialize with the empty set. 
+	for num in theSet:
+		for subsets in allSubsets:
+			allSubsets.extend(subsets + [num])
+
+	return allSubsets
+
+
+
+
+
+
+
+
+
+
+
+#	size = int(math.pow(2, len(keys)))
+
+#	for i in range(size):
+#		for j in range(len(keys)):
+#			if (((i > j) & 1) == 1):
+#				print keys[j]
+
+#		print "\n"
+
+# keys = (1,2,3,4)
+# subSets(keys)
+
+
+
+
  # Given a number n, return a number formed from the same digits of n that is
   # the number right before n. Example: Given 1342, you must return the number 1324.
 
@@ -176,6 +222,57 @@ def findGrowth():
 # findGrowth()
 
 
+# Palindromes
+
+# Given a string, you keep swapping any two characters in the string randomly till the string becomes a palindrome. What is the
+# expected number of swaps you will make? There will always be at least one palindrome which can be formed with the letters
+# of the given string.
+# Input:
+# The first line contains the number of test cases T. Each of the next T lines contains a string each.
+# Output:
+# Output T lines containing the answer for the corresponding test case. Print the answer rounded to exactly 4 decimal places.
+# Constraints:
+# T <= 10000
+# The length of the string will be at most 8 characters.
+# The string will consist of only lower-case letters 'a'-'z'.
+
+
+
+# A) random swaps, finding probability. This means probability of getting to a certain arrangeent of words
+# Palindromes can be swapped around and have the same word, so 2*pr(palindrome)
+
+# D) Edit distance?
+
+# P) Edge case: JK IT WILL ALWAYS BE A PALINDROME
+		# check palindrome()
+		#	iterate through the string
+		#		if x not in seen:
+		#			hash[x] = 1
+		#		elif x in seen.keys:
+		#			hash[x] += 1
+
+		#	check if all values are 2.
+		#		If not, no palindrome. If so, yes palindrome
+
+# def probPal():
+
+#	how many swaps to make a palindrome? 
+#	i = 0
+#	l = len(list)
+
+#	while isPalindrome(list) == False: 
+#		if list[i] != list[l]:
+#			swap list[i] randomly
+#			reset i and l
+
+#		elif list[i] = list[l]:
+#			i += 1
+#			l -= 1
+
+
+
+
+
 
 
 # A subsequence of a sequence is a sequence which is obtained by deleting zero or more elements from the sequence.
@@ -193,8 +290,8 @@ def findGrowth():
 # Constraints:
 # 1 <= T <= 5
 # 1 <= N <= 150000
-# 1 <= a <= 10 , where i ∈ [1..N]
-# 1 <= w <= 10 , where i ∈ [1..N]
+# 1 <= a <= 10 , where i  [1..N]
+# 1 <= w <= 10 , where i  [1..N]
 
 
 		
@@ -257,4 +354,42 @@ def findGrowth():
 # print nincr_seq_ivlad(range(19, -1, -1)), 20
 # print nincr_seq_ivlad([1]*9), 9
 # print nincr_seq_ivlad([-1]*19), 19
+
+
+
+
+
+
+# For an array of integers, give an algorithm to determine if there are three elements 
+# that sum to zero. What are the time and space complexity? Generalize to the case where 
+# the sum of k elements is 0?
+
+# k = 3, Choice (N, K). Runtime is n^k 
+# Naive solution
+
+
+# First sort the array in O(nlogn) time
+
+#get all triplets. Prune the ones that are all positive or negative
+# Get sums of doubles. Then go through each number to see if it equals zero
+# Order the array 
+
+def sumToZero(numbers, k):
+	for i in range(len(numbers)):
+		j = i + 1 #start right after j
+		k = len(numbers - 1) # the end of the array
+
+		while (k >= j):  #two cases, if sum is positive, 
+			if (numbers[i] + numbers[j] + numbers[k] == 0):
+				return True
+			elif numbers[i] + numbers[j] + numbers[k] > 0:
+				k -= 1
+			else:
+				j -= 1
+
+	return False #if nothing was found
+
+
+
+
 
