@@ -1,5 +1,39 @@
 import math
 import heapq
+
+
+# Given string, move all white spaces to the end in place
+
+
+def whiteSpace(string):
+
+	# Count how many spaces there are.
+	# split string by space. 
+	# append the new list of strings and add the amount of white space
+	whiteCount = 0
+	newString = ""
+	for x in string:
+		if x == " ":
+			whiteCount += 1
+
+	newList = string.split(" ")
+
+	for word in newList:
+		newString += word
+
+	for x in range(whiteCount):
+		newString += " "
+
+	print newString
+
+
+exStr = 'the power is down'
+whiteSpace(exStr)
+
+
+
+
+
 # Summing the N Series
 # You are given a series, whose n term is defined as
 # T = n^2 - (n-1)^2
@@ -177,6 +211,9 @@ class PriorityQueue():
 		heapq.heappush(self._queue, (-priority, self._index, item))
 		self._index += 1
 
+	def changeKey(self, item, newPriority):
+		self._queue
+
 	def pop(self):
 		return heapq.heappop(self._queue)[-1]
 
@@ -187,24 +224,36 @@ class PriorityQueue():
 
 
 
-def dijkstras(graph, end, source):
-	finalPath = []
-	pq = PriorityQueue()
-	visited = []
-	dist = {}
-	prev = {}
+# def dijkstras(graph, end, source):
+#	finalPath = []
+#	pq = PriorityQueue()
+#	visited = []
+#	dist = {}
+#	prev = {}
 
 
-	dist[source] = 0
+#	dist[source] = 0
+
+#	# Initialize the distances to zero
+#	for vert in graph:
+#		if vert != source: 
+#			dist[vert] = float("inf")
+#			prev[vert] = None
+#			pq.push(vert, dist[vert]) #This is adding the vertex distances to the priority heap.
 
 
-	for vert in graph:
-		if vert != source: 
-			dist[vert] = float("inf")
-			prev[vert] = None
+#	while (pq.length != 0):
+#		u = pq.pop() #Get the min distance of the heap. The inital node will be the source because it is zero	
+#		if u == end:
+#			#Return the priority of that element. 
+#			#Break the loop, we found the smallest cost
+#		for neighbors in u.values():
+#			if dist[u] + u[neighbors] < dist[neighbors]:
+#				dist[neighbors] = dist[u] + u[neighbors]
+#				#Update the priority Queue.
 
-	while (pq.length != 0):
-		u = pq.pop()
+
+
 
 # TEST GRAPH
 # tg = Graph()
@@ -268,4 +317,20 @@ def subweighting(sortedArr):
 
 
 
+# A clique in a graph is set of nodes such that there is an edge between any two distinct 
+# nodes in the set. It is well known that finding the largest clique in a graph is a computationally 
+# tough problem and no polynomial time algorithm exists for it. However, you wonder what is the minimum size of the largest 
+# clique in any graph with N nodes and M edges.
+
+def clique():
+	testCases = raw_input()
+
+	#For N nodes, must have N-1 Edges. 
+
+	#Base case, if m = n-1, then return 2. 
+	#Else, 
+
+
+
+# Suppose you have a weight on one side of a scale. Given an array of other weights, see if the scale will balance. You can use weights on either side, and you don't have to use all the weights.
 
